@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/frame1"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rectangle_box"
+            android:layout_below="@+id/text1"
+            android:layout_marginTop="30dp">
+
+            <com.LAW.Lift.model.MyTextview
+                android:id="@+id/titlehigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title :"
+
+                android:textAllCaps="false"
+                android:textColor="#800000"
+                android:textSize="20sp" />
+            <com.LAW.Lift.model.MyTextviews
+                android:id="@+id/highpara"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textAllCaps="false"
+                android:layout_below="@+id/titlehigh"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                />
+
+
+
+            <com.LAW.Lift.model.MyTextview
+                android:id="@+id/textcontext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Context :"
+                android:textAllCaps="false"
+                android:textColor="#800000"
+                android:layout_below="@+id/highpara"
+                android:textSize="20sp"
+                />
+            <com.LAW.Lift.model.MyTextviews
+                android:id="@+id/contexthigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:layout_below="@+id/textcontext"
+                android:textAllCaps="false"
+                android:layout_marginLeft="2dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                />
+
+
+
+            <com.LAW.Lift.model.MyTextview
+                android:id="@+id/textquestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Question :"
+                android:layout_marginTop="5dp"
+                android:textAllCaps="false"
+                android:layout_below="@id/contexthigh"
+                android:textColor="#800000"
+                android:textSize="20sp"
+                />
+            <com.LAW.Lift.model.MyTextviews
+                android:id="@+id/questionhigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textAllCaps="false"
+                android:layout_marginLeft="2dp"
+                android:layout_below="@+id/textquestion"
+                android:textColor="#000000"
+                android:textSize="20sp"
+
+                />
+
+
+            <com.LAW.Lift.model.MyTextview
+                android:id="@+id/textanswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Answer :"
+                android:textAllCaps="false"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/questionhigh"
+                android:textColor="#800000"
+                android:textSize="20sp"
+                />
+            <com.LAW.Lift.model.MyTextviews
+                android:id="@+id/answerhigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textAllCaps="false"
+                android:layout_below="@+id/textanswer"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:layout_marginLeft="2dp"
+               />
+
+
+            <com.LAW.Lift.model.MyTextview
+                android:id="@+id/textreference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reference :"
+                android:textAllCaps="false"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/answerhigh"
+                android:textColor="#800000"
+                android:textSize="20sp"
+                />
+            <com.LAW.Lift.model.MyTextviews
+                android:id="@+id/referencehigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:layout_below="@+id/textreference"
+                android:textSize="20sp"
+                android:layout_marginLeft="2dp"
+                />
+
+            <com.LAW.Lift.model.MyTextview
+                android:id="@+id/textfull"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="For Full Text :"
+                android:textAllCaps="false"
+                android:textColor="#800000"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/referencehigh"
+                android:textSize="20sp"
+                />
+            <com.LAW.Lift.model.MyTextviews
+                android:id="@+id/texthigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Touch here "
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/textfull"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="20sp"/>
+
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+

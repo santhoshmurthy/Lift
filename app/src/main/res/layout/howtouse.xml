@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+
+    <com.LAW.Lift.model.MyTextview
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="How To Use"
+        android:textSize="25sp"
+        android:textColor="#000"
+        android:layout_marginLeft="100dp"
+        android:gravity="center_vertical"
+        android:id="@+id/textView20"
+        android:layout_marginTop="15dp" />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/line1"
+                android:layout_width="1000dp"
+                android:layout_height="40dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/line_bar" />
+
+            <com.LAW.Lift.model.MyTextviews
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#4c4c4c"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="* All the five sections of the Monthly LIFT content are in the main display.  Users can touch and access the same. Content will be displayed if only your device is connected to the internet."
+                android:layout_below="@+id/line1"
+                android:id="@+id/textView14" />
+
+            <com.LAW.Lift.model.MyTextviews
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textView15"
+                android:textColor="#4c4c4c"
+                android:textSize="18sp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/textView14"
+                android:id="@+id/textView15" />
+
+            <com.LAW.Lift.model.MyTextviews
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textView16"
+                android:textColor="#4c4c4c"
+                android:textSize="18sp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/textView15"
+                android:id="@+id/textView16" />
+
+            <com.LAW.Lift.model.MyTextviews
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="* LIFT icon in the drop down provides information About the App, How to Use, Aim and Disclaimer and Contact."
+                android:textColor="#4c4c4c"
+                android:textSize="18sp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/textView16"
+                android:id="@+id/textView17" />
+
+            <com.LAW.Lift.model.MyTextviews
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textView18"
+                android:textColor="#4c4c4c"
+                android:textSize="20sp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/textView17"
+                android:id="@+id/textView18" />
+
+            <com.LAW.Lift.model.MyTextviews
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="* SEARCH icon enables searching the legislation and case law sections by any key word. Touch the icon, then select the section and then key in the word for search and you will find the relevant pages displayed."
+                android:textColor="#4c4c4c"
+                android:textSize="18sp"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/textView18"
+                android:id="@+id/textView19" />
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

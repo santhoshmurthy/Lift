@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About Us"
+        android:textColor="#000"
+        android:textSize="22sp"
+        android:id="@+id/textView13"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="15dp">
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+    <ImageView
+        android:id="@+id/line1"
+        android:layout_width="1000dp"
+        android:layout_height="30dp"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:layout_marginTop="1dp"
+        android:src="@drawable/line_bar" />
+
+
+
+    <com.LAW.Lift.model.MyTextviews
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LIFT (Law in Finger Tips) is easy access to Indian Law. With a strong and crystal clear mission to provide greatly useful legal information in a well cut-out and simple, yet proficient and professional manner to the needs of experts as well as those of the general public, every month LIFT presents carefully and viably selected Legislations of the Union of India and the State of Tamil Nadu, decided cases of the Supreme Court of India and the Madras High Court in an exceptional style. Furthermore it contains a ‘Forum’ section containing related information and tips in an interesting fashion. Every section of the content made available, is written by highly experienced professionals who are very much in active practice and hence understand the needs of all users, thereby making this app extremely useful and highly trustable. The fact that content is available in both English and Tamil, for free, doubles the already high utility and value of this app."
+        android:layout_below="@+id/line1"
+        android:layout_marginLeft="10dp"
+        android:textColor="#4c4c4c"
+        android:textSize="18sp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/textView11"/>
+
+
+    <com.LAW.Lift.model.MyTextviews
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LIFT grants permission to its users to copy, reproduce, and print or use the content of all the five sections of the ‘LIFT of the Month’ for their professional / personal use, except commercial exploitation. LIFT INDIA only reserves its rights of the name, logo and its one-of-a-kind format."
+        android:textColor="#4c4c4c"
+        android:textSize="20sp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="1dp"
+        android:paddingRight="12dp"
+        android:layout_below="@+id/textView11"
+        android:id="@+id/textView12" />
+
+
+
+</RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

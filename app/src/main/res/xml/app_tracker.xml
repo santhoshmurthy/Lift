@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- End current session if app sleeps for a period of time -->
+    <integer name="ga_sessionTimeout">300</integer>
+
+    <!-- Enable automatic Activity measurement -->
+    <bool name="ga_autoActivityTracking">true</bool>
+
+    <!--  The property id associated with this analytics tracker -->
+    <string name="ga_trackingId">UA-72566721-1</string>
+
+    <string name="ga_sampleFrequency">100.0</string>
+
+    <bool name="ga_reportUncaughtExceptions">true</bool>
+
+
+    <screenName name="com.webapps.webapps.activity.MainActivity">Main Activity</screenName>
+
+    <screenName name="com.webapps.webapps.activity.LoginScreen">Login</screenName>
+
+    <screenName name="com.webapps.webapps.activity.AddDomain">Adding Domains</screenName>
+
+    <screenName name="com.webapps.webapps.activity.AddSecDetails">Adding Secondary Details</screenName>
+
+    <screenName name="com.webapps.webapps.activity.AddServer">Adding Server</screenName>
+
+    <screenName name="com.webapps.webapps.activity.DomainDetails">Domain Details</screenName>
+
+    <screenName name="com.webapps.webapps.activity.DomainList">Domain list</screenName>
+
+    <screenName name="com.webapps.webapps.activity.ForgotPassword">ForgetPassword</screenName>
+
+    <screenName name="com.webapps.webapps.activity.ForgotPasswordOtp">ForgotPasswordOtp</screenName>
+
+    <screenName name="com.webapps.webapps.activity.OTPActivity">OTPActivity </screenName>
+
+    <screenName name="com.webapps.webapps.activity.ResetPassword">ResetPassword</screenName>
+
+    <screenName name="com.webapps.webapps.activity.SignUp">Signup</screenName>
+
+    <screenName name="com.webapps.webapps.activity.SplashScreen">SplashScreen</screenName>
+
+    <screenName name="com.webapps.webapps.activity.ServerDetails">Server Details</screenName>
+
+    <screenName name="com.webapps.webapps.activity.ServerList">Server List</screenName>
+
+    <screenName name="com.webapps.webapps.activity.ServerStatisticLinks">Server Statictic link</screenName>
+
+    <screenName name="com.webapps.webapps.activity.StatisticLinks">Statistic Links</screenName>
+
+    <screenName name="com.webapps.webapps.activity.DomainSecList">Domain Secondary List</screenName>
+
+
+
+
+</resources>

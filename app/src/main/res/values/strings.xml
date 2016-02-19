@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Law</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+    <string name="Home">home</string>
+    <string name="contactus">contactus</string>
+    <string name="AboutUs">About Us</string>
+    <string name="HowTouse">how to use</string>
+    <string name="Disclaimer">Disclaimer</string>
+    <string name="textView18">* <b>LIBRARY</b> icon, contains all the old volumes from July, 2013.  Touch the icon, then choose the year and then touch the volume to read.</string>
+    <string name="textView16">* Information about the App,<b>Libarary</b> or <b>Search</b>options are available by touching the drop-down menu icon.</string>
+    <string name="textView15">* Touching the icon <b> English </b> or <b>தமிழ் </b>will change the language of the entire content accordingly.</string>
+<string name="spinner1">select</string>
+
+
+    <string-array name="nav_drawer_items">
+
+
+
+        <item></item>
+        <item>Home</item>
+        <item>Contact Us</item>
+        <item>About Us</item>
+        <item>How To Use</item>
+        <item>Aim and Disclaimer</item>
+        <item>library</item>
+
+
+
+    </string-array>
+
+    <array name="nav_drawer_icons">
+
+
+
+        <!-- <item>@drawable/earn</item>-->
+        <!--<item>@drawable/sa</item>-->
+    </array>
+    <string name="logout">Logout</string>
+</resources>
