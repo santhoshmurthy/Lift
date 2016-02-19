@@ -9,12 +9,8 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:background="@drawable/loadingretailer"
-        android:src
-
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/relativeLayout"
         android:adjustViewBounds="true"
-
         />
     <TextView
         android:layout_width="wrap_content"
@@ -23,7 +19,6 @@
         android:textColor="#4c4c4c"
         android:text="ggg"
         android:layout_centerHorizontal="true"
-
         android:layout_below="@+id/retimag"/>
 
 

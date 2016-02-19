@@ -41,10 +41,12 @@ public class Library extends Activity {
     public static String[] Published_Month;
     public static String[] month;
     public String[] year;
-    String years;
-    String urlJsonArry = "http://www.lawinfingertips.com/webservice/Lift_Final/get_all_books.php?year=2016";
+    public  static String years;
+    String selectedyear;
+    String urlJsonArry = "http://www.lawinfingertips.com/webservice/Lift_Final/get_all_books.php?year=";
     String jsonPorturl = "http://www.lawinfingertips.com/webservice/Lift_Final/get_year.php?id=1";
     Spinner spinner1;
+    String book;
     ProgressDialog pDialog;
     AlertDialogManager alert = new AlertDialogManager();
     ConnectionDetector cd;
@@ -68,10 +70,10 @@ public class Library extends Activity {
 
 
 
+
         cd = new ConnectionDetector(getApplicationContext());
         gridView = (GridView) findViewById(R.id.gridView);
-        libraryAdapter = new LibraryAdapter(Library.this, R.layout.library);
-        gridView.setAdapter(libraryAdapter);
+
 
 
         spinner1 = (Spinner) findViewById(R.id.spinner1);
@@ -131,6 +133,77 @@ public class Library extends Activity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
                 years = spinner1.getSelectedItem().toString();
+                selectedyear = spinner1.getSelectedItem().toString();
+                libraryAdapter = new LibraryAdapter(Library.this, R.layout.library);
+                gridView.setAdapter(libraryAdapter);
+                libraryAdapter.clear();
+
+
+                RequestQueue queue1 = MyVolley.getRequestQueue();
+
+                JsonObjectRequest req1 = new JsonObjectRequest(urlJsonArry + selectedyear, null,
+                        new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+
+                                try {
+                                    Log.e("Library", "response.get_all_book" + response + selectedyear);
+
+                                    JSONObject jobject = response;
+
+                                    JSONArray jsonMainArr = jobject.getJSONArray("get_all_book");
+
+                                    Id = new String[jsonMainArr.length()];
+                                    Book_Name = new String[jsonMainArr.length()];
+                                    Url = new String[jsonMainArr.length()];
+                                    Published_Month = new String[jsonMainArr.length()];
+                                    month = new String[jsonMainArr.length()];
+
+
+                                    for (int i = 0; i < jsonMainArr.length(); i++) {
+
+                                        JSONObject person = (JSONObject) jsonMainArr.get(i);
+
+                                        Id[i] = person.getString("Id");
+                                        Book_Name[i] = person.getString("Book_Name");
+                                        Url[i] = person.getString("Url");
+                                        Published_Month[i] = person.getString("Published_Month");
+                                        month[i] = person.getString("month");
+
+                                        retimag = person.getString("Url");
+                                        monthtext = person.getString("month");
+
+
+                                        librarycard librarycard = new librarycard(retimag, monthtext);
+                                        libraryAdapter.add(librarycard);
+
+
+                                    }
+                                    if (pDialog.isShowing())
+                                        pDialog.dismiss();
+                                    //mTvResult.setText(jsonResponse);
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+
+                                    if (pDialog.isShowing())
+                                        pDialog.dismiss();
+                                }
+
+                            }
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        if (pDialog.isShowing())
+                            pDialog.dismiss();
+                        Log.e("Hiistory", "error  " + error);
+                        // listView.setVisibility(View.GONE);
+                    }
+
+
+                });
+                queue1.add(req1);
+                gridView.setAdapter(libraryAdapter);
 
 
             }
@@ -161,74 +234,6 @@ public class Library extends Activity {
 
 
 
-        RequestQueue queue1 = MyVolley.getRequestQueue();
-
-        JsonObjectRequest req1 = new JsonObjectRequest(urlJsonArry,null,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-
-                        try {
-                            Log.e("History", "response.get_all_book" + response);
-
-                            JSONObject jobject =response;
-
-                            JSONArray jsonMainArr = jobject.getJSONArray("get_all_book");
-
-                            Id = new String[jsonMainArr.length()];
-                            Book_Name = new String[jsonMainArr.length()];
-                            Url = new String[jsonMainArr.length()];
-                            Published_Month = new String[jsonMainArr.length()];
-                            month = new String[jsonMainArr.length()];
-
-                            for (int i = 0; i < jsonMainArr.length(); i++) {
-
-                                JSONObject person = (JSONObject) jsonMainArr.get(i);
-
-                                Id[i] = person.getString("Id");
-                                Book_Name[i] = person.getString("Book_Name");
-                                Url[i] = person.getString("Url");
-                                Published_Month[i] = person.getString("Published_Month");
-                                month[i] = person.getString("month");
-
-                                retimag = person.getString("Url");
-                                monthtext = person.getString("month");
-
-
-
-
-
-
-                                librarycard librarycard = new librarycard(retimag, monthtext);
-                                libraryAdapter.add(librarycard);
-
-
-                            }
-                            if (pDialog.isShowing())
-                                pDialog.dismiss();
-                            //mTvResult.setText(jsonResponse);
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-
-                            if (pDialog.isShowing())
-                                pDialog.dismiss();
-                        }
-
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                if (pDialog.isShowing())
-                    pDialog.dismiss();
-                Log.e("Hiistory","error  "+error);
-                // listView.setVisibility(View.GONE);
-            }
-
-
-        });
-        queue1.add(req1);
-        gridView.setAdapter(libraryAdapter);
 
 }
 

@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.LAW.Lift.R;
+import com.LAW.Lift.activity.Library;
 import com.LAW.Lift.activity.MainActivity;
 import com.LAW.Lift.app.MyVolley;
 import com.LAW.Lift.model.forumcard;
@@ -22,10 +23,10 @@ import com.android.volley.toolbox.NetworkImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LibraryAdapter extends ArrayAdapter<librarycard> implements AdapterView.OnItemClickListener{
+public class LibraryAdapter extends ArrayAdapter<librarycard> {
     private static final String TAG = "CardArrayAdapter";
     private List<librarycard> cardList = new ArrayList<librarycard>();
-
+    librarycard librarycard;
     String bus_id_item;
     private ImageLoader mImageLoader;
     int textViewResourceId;
@@ -36,6 +37,11 @@ public class LibraryAdapter extends ArrayAdapter<librarycard> implements Adapter
 
         super(context, textViewResourceId);
         this.textViewResourceId = textViewResourceId;
+    }
+
+    @Override
+    public void clear() {
+        super.clear();
     }
 
     @Override
@@ -73,7 +79,7 @@ public class LibraryAdapter extends ArrayAdapter<librarycard> implements Adapter
             viewHolder = (CardViewHolder) row.getTag();
         }
         mImageLoader = MyVolley.getImageLoader();
-        librarycard librarycard = getItem(position);
+       librarycard = getItem(position);
         String url = librarycard.getretimag();
         if (url.length() > 0)
             viewHolder.line1.setImageUrl(url, MyVolley.getImageLoader());
@@ -94,10 +100,10 @@ public class LibraryAdapter extends ArrayAdapter<librarycard> implements Adapter
             public void onClick(View v) {
 
                 Intent homeIntent = new Intent(getContext(), MainActivity.class);
-                Log.i("Adapter", position + " Deal_id onClick " + MainActivity.Id);
+                Log.i("Adapter", position + " Deal_id onClick " + Library.Id[position]);
                 //Log.i("Adapter"+"MainActivity"+MainActivity.);
-                homeIntent.putExtra("book_id", MainActivity.Id);
-                homeIntent.putExtra("month",MainActivity.month);
+                homeIntent.putExtra("book_id", Library.Id[position]);
+                homeIntent.putExtra("month",librarycard.getmonthtext());
                 homeIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 getContext().startActivity(homeIntent);
 
@@ -107,9 +113,6 @@ public class LibraryAdapter extends ArrayAdapter<librarycard> implements Adapter
         return row;
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-    }
 
     static class CardViewHolder {
         NetworkImageView line1;
