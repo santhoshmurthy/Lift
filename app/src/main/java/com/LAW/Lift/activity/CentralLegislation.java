@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -43,6 +44,7 @@ import java.util.List;
 import static android.support.v4.app.ActivityCompat.startActivity;
 
 public class CentralLegislation extends Activity {
+    ImageView back;
     public static String[] get_legislation;
     public static String[] book_id;
     public static String[] state_id;
@@ -73,6 +75,7 @@ public class CentralLegislation extends Activity {
 String months;
     private CardArrayAdapter rideadapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,6 +87,17 @@ String months;
         View v = inflator.inflate(R.layout.titleview, null);
         ((MyTextviewWhite) v.findViewById(R.id.title)).setText(this.getTitle());
         this.getActionBar().setCustomView(v);
+        back=(ImageView)findViewById(R.id.back);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent open = new Intent(CentralLegislation.this,MainActivity.class);
+                startActivity(open);
+              finish();
+
+            }
+        });
         febcentral=(MyTextview)findViewById(R.id.febcentral);
 
         Bundle extras = getIntent().getExtras();

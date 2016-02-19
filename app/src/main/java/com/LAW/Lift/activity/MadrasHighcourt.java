@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -30,6 +31,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class MadrasHighcourt extends Activity {
+    ImageView back;
     TextView madrastext;
     public static String[] get_legislation;
     public static String[] book_name;
@@ -68,6 +70,21 @@ public class MadrasHighcourt extends Activity {
         View v = inflator.inflate(R.layout.titleview, null);
         ((MyTextviewWhite) v.findViewById(R.id.title)).setText(this.getTitle());
         this.getActionBar().setCustomView(v);
+        back=(ImageView)findViewById(R.id.back);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent open = new Intent(MadrasHighcourt.this, MainActivity.class);
+                startActivity(open);
+                finish();
+
+            }
+        });
+
+
+
+
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             //bus_names=extras.getStringArray("BusNames");

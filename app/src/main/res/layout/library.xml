@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="#fff">
+    android:orientation="vertical"
+    android:layout_width="130dp"
+    android:layout_height="110dp"
+    android:background="@drawable/bg"
+    >
 
     <com.android.volley.toolbox.NetworkImageView
         android:id="@+id/retimag"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="@drawable/loadingretailer"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+      android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         android:adjustViewBounds="true"
         />
@@ -16,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/monthtext"
-        android:textColor="#4c4c4c"
+        android:textColor="#fff"
         android:text="ggg"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/retimag"/>

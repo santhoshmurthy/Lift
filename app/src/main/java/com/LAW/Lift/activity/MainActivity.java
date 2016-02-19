@@ -259,7 +259,7 @@ public class MainActivity extends FragmentActivity {
         navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
 
         // nav drawer icons from resources
-        navMenuIcons = getResources()
+       navMenuIcons = getResources()
                 .obtainTypedArray(R.array.nav_drawer_icons);
 
         mDrawerRelativeLayout = (RelativeLayout) findViewById(R.id.left_drawer);
@@ -373,10 +373,9 @@ public class MainActivity extends FragmentActivity {
 
         switch (position) {
             case 0:
+
                 break;
-            /*case 1:
-                fragment = new UserFragment();
-                break;*/
+
             case 1:
 
                 Intent i=new Intent(MainActivity.this,MainActivity.class);

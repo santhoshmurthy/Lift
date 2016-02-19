@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -32,7 +33,7 @@ import org.json.JSONObject;
 
 public class Forum extends Activity {
 
-
+    ImageView back;
 MyTextview febtext;
     public static String[] get_legislation;
     public static String[] book_name;
@@ -66,7 +67,17 @@ String  bookid;
         febtext=(MyTextview)findViewById(R.id.febtext);
         ((MyTextviewWhite) v.findViewById(R.id.title)).setText(this.getTitle());
         this.getActionBar().setCustomView(v);
+        back=(ImageView)findViewById(R.id.back);
 
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent open = new Intent(Forum.this, MainActivity.class);
+                startActivity(open);
+                finish();
+
+            }
+        });
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             //bus_names=extras.getStringArray("BusNames");

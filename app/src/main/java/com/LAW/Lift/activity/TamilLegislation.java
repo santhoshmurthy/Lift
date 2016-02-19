@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -31,6 +32,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class TamilLegislation extends Activity {
+    ImageView back;
     TextView tamilfeb;
     public static String[] get_legislation;
     public static String[] book_id;
@@ -73,6 +75,19 @@ public class TamilLegislation extends Activity {
         tamilfeb=(TextView)findViewById(R.id.tamilfeb);
         ((MyTextviewWhite) v.findViewById(R.id.title)).setText(this.getTitle());
         this.getActionBar().setCustomView(v);
+
+
+        back=(ImageView)findViewById(R.id.back);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent open = new Intent(TamilLegislation.this, MainActivity.class);
+                startActivity(open);
+                finish();
+
+            }
+        });
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             //bus_names=extras.getStringArray("BusNames");

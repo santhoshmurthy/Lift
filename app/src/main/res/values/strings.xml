@@ -23,18 +23,18 @@
         <item>About Us</item>
         <item>How To Use</item>
         <item>Aim and Disclaimer</item>
-        <item>library</item>
+        <item>Library</item>
 
 
 
     </string-array>
 
-    <array name="nav_drawer_icons">
+  <array name="nav_drawer_icons">
 
 
 
-        <!-- <item>@drawable/earn</item>-->
-        <!--<item>@drawable/sa</item>-->
+  <!-- <item>@drawable/earn</item>&ndash;&gt;-->
+       <!-- &lt;!&ndash;<item>@drawable/sa</item>&ndash;&gt;-->
     </array>
     <string name="logout">Logout</string>
 </resources>
