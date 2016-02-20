@@ -10,7 +10,7 @@
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="20dp">
 
         <RelativeLayout
             android:id="@+id/frame1"
@@ -33,13 +33,13 @@
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/lawname"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="fffffffffffffffffffffff"
                 android:layout_below="@+id/text2"
                 android:textAllCaps="false"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="20sp" />
 
 
 
@@ -54,13 +54,13 @@
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/lawactno"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="ffddddrffffffffffffffffffff"
                 android:textAllCaps="false"
                 android:layout_below="@+id/text3"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="20sp" />
 
 
             <com.LAW.Lift.model.MyTextview
@@ -74,13 +74,13 @@
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/lawenactedby"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="gggggg"
                 android:layout_below="@+id/text4"
                 android:textAllCaps="false"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="20sp" />
 
 
             <com.LAW.Lift.model.MyTextview
@@ -94,13 +94,13 @@
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/lawreceived"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="gggg"
                 android:layout_below="@+id/text5"
                 android:textAllCaps="false"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="20sp" />
 
             <com.LAW.Lift.model.MyTextview
                 android:id="@+id/text6"
@@ -114,13 +114,13 @@
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/lawpublished"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="rrrrrr"
                 android:layout_below="@+id/text6"
                 android:textAllCaps="false"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="20sp" />
 
             <com.LAW.Lift.model.MyTextview
                 android:id="@+id/text7"
@@ -134,13 +134,13 @@
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/lawcame"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="fffff"
                 android:layout_below="@+id/text7"
                 android:textAllCaps="false"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="20sp" />
 
 
             <com.LAW.Lift.model.MyTextview
@@ -155,13 +155,13 @@
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/lawsalient"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text=""
                 android:layout_below="@+id/text8"
                 android:textAllCaps="false"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="20sp" />
 
             <com.LAW.Lift.model.MyTextview
                 android:id="@+id/text9"
@@ -175,13 +175,13 @@
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/lawbrief"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text=""
                 android:layout_below="@+id/text9"
                 android:textAllCaps="false"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="20sp" />
 
             <com.LAW.Lift.model.MyTextview
                 android:id="@+id/text10"
@@ -204,7 +204,7 @@
                android:clickable="true"
                 android:layout_below="@+id/text10"
                 android:textColor="#0000ff"
-                android:textSize="15sp" />
+                android:textSize="20sp" />
 
 
         </RelativeLayout>

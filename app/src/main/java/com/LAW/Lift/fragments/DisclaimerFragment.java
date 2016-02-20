@@ -8,20 +8,17 @@ import android.view.ViewGroup;
 
 import com.LAW.Lift.R;
 
-/**
- * Created by santhoshis on 2/10/2016.
- */
 public class DisclaimerFragment extends Fragment {
 
 
 
     public static DisclaimerFragment newInstance() {
-        DisclaimerFragment fragmentStarter = new DisclaimerFragment();
+       /* DisclaimerFragment fragmentStarter = new DisclaimerFragment();
 
         Bundle args = new Bundle();
 
-        fragmentStarter.setArguments(args);
-        return fragmentStarter;
+        fragmentStarter.setArguments(args);*/
+        return null;
     }
 
     @Override

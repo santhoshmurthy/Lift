@@ -92,9 +92,9 @@ String months;
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent open = new Intent(CentralLegislation.this,MainActivity.class);
-                startActivity(open);
-              finish();
+               /* Intent open = new Intent(CentralLegislation.this,MainActivity.class);
+                startActivity(open);*/
+                finish();
 
             }
         });
@@ -235,7 +235,7 @@ String months;
     }
 
 
-    public boolean onOptionsItemSelected(MenuItem item){
+   /* public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()) {
             case android.R.id.home:
                 Intent intent = new Intent(this, MainActivity.class);
@@ -247,13 +247,13 @@ String months;
                 return super.onOptionsItemSelected(item);
         }
     }
-
+*/
     @Override
     public void onBackPressed() {
         if (pDialog.isShowing())
             pDialog.dismiss();
-        Intent in = new Intent(CentralLegislation.this, MainActivity.class);
-        startActivity(in);
+       /* Intent in = new Intent(CentralLegislation.this, MainActivity.class);
+        startActivity(in);*/
         finish();
     }
 }

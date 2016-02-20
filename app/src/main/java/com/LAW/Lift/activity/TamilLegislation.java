@@ -82,8 +82,8 @@ public class TamilLegislation extends Activity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent open = new Intent(TamilLegislation.this, MainActivity.class);
-                startActivity(open);
+               /* Intent open = new Intent(TamilLegislation.this, MainActivity.class);
+                startActivity(open);*/
                 finish();
 
             }
@@ -214,7 +214,7 @@ public class TamilLegislation extends Activity {
             listView2.setAdapter(rideadapter2);
         }
     }
-    public boolean onOptionsItemSelected(MenuItem item){
+   /* public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()) {
             case android.R.id.home:
                 Intent intent = new Intent(this, MainActivity.class);
@@ -225,14 +225,14 @@ public class TamilLegislation extends Activity {
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
+    }*/
 
     @Override
     public void onBackPressed() {
         if (pDialog.isShowing())
             pDialog.dismiss();
-        Intent in = new Intent(TamilLegislation.this, MainActivity.class);
-        startActivity(in);
+       /* Intent in = new Intent(TamilLegislation.this, MainActivity.class);
+        startActivity(in);*/
         finish();
     }
 }

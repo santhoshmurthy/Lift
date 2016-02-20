@@ -100,10 +100,10 @@ public class LibraryAdapter extends ArrayAdapter<librarycard> {
             public void onClick(View v) {
 
                 Intent homeIntent = new Intent(getContext(), MainActivity.class);
-                Log.i("Adapter", position + " Deal_id onClick " + Library.Id[position]);
+                Log.i("Adapter", position + " Deal_id onClick " + Library.Id[position]+Library.month[position]);
                 //Log.i("Adapter"+"MainActivity"+MainActivity.);
                 homeIntent.putExtra("book_id", Library.Id[position]);
-                homeIntent.putExtra("month",librarycard.getmonthtext());
+                homeIntent.putExtra("month",Library.month[position]);
                 homeIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 getContext().startActivity(homeIntent);
 

@@ -72,8 +72,8 @@ String  bookid;
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent open = new Intent(Forum.this, MainActivity.class);
-                startActivity(open);
+               /* Intent open = new Intent(Forum.this, MainActivity.class);
+                startActivity(open);*/
                 finish();
 
             }
@@ -201,8 +201,8 @@ String  bookid;
     public void onBackPressed() {
         if (pDialog.isShowing())
             pDialog.dismiss();
-        Intent in = new Intent(Forum.this, MainActivity.class);
-        startActivity(in);
+       /* Intent in = new Intent(Forum.this, MainActivity.class);
+        startActivity(in);*/
         finish();
     }
 }

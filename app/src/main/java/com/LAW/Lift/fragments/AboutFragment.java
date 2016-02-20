@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import com.LAW.Lift.R;
 public class AboutFragment extends Fragment {
-    public static ContactusFragment newInstance() {
+    public static AboutFragment newInstance() {
         return null;
     }
     @Override

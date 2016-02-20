@@ -33,13 +33,13 @@
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/tamilname"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="fffffffffffffffffffffff"
                 android:layout_below="@+id/text2"
                 android:textAllCaps="false"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="20sp" />
 
 
 
@@ -55,13 +55,13 @@
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/tamilactno"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="ffddddrffffffffffffffffffff"
                 android:textAllCaps="false"
                 android:layout_below="@+id/text3"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="20sp" />
 
 
             <com.LAW.Lift.model.MyTextview
@@ -76,13 +76,13 @@
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/tamilenactedby"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="gggggg"
                 android:layout_below="@+id/text4"
                 android:textAllCaps="false"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="20sp" />
 
 
             <com.LAW.Lift.model.MyTextview
@@ -97,8 +97,8 @@
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/tamilreceived"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="gggg"
                 android:layout_below="@+id/text5"
                 android:textAllCaps="false"
@@ -117,8 +117,8 @@
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/tamilpublished"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="rrrrrr"
                 android:layout_below="@+id/text6"
                 android:textAllCaps="false"
@@ -137,8 +137,8 @@
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/tamilcame"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="fffff"
                 android:layout_below="@+id/text7"
                 android:textAllCaps="false"
@@ -158,8 +158,8 @@
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/tamilsalient"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text=""
                 android:layout_below="@+id/text8"
                 android:textAllCaps="false"
@@ -178,8 +178,8 @@
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/tamilbrief"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text=""
                 android:layout_below="@+id/text9"
                 android:textAllCaps="false"

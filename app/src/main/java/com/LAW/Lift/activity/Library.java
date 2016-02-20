@@ -2,6 +2,7 @@ package com.LAW.Lift.activity;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -41,7 +43,7 @@ public class Library extends Activity {
     public static String[] Published_Month;
     public static String[] month;
     public String[] year;
-    public  static String years;
+    public static String years;
     String selectedyear;
     String urlJsonArry = "http://www.lawinfingertips.com/webservice/Lift_Final/get_all_books.php?year=";
     String jsonPorturl = "http://www.lawinfingertips.com/webservice/Lift_Final/get_year.php?id=1";
@@ -53,7 +55,8 @@ public class Library extends Activity {
     public ArrayAdapter<String> adapter;
     private LibraryAdapter libraryAdapter;
     GridView gridView;
-    String retimag,monthtext;
+    String retimag, monthtext;
+    ImageView back;
 
 
     @Override
@@ -67,13 +70,21 @@ public class Library extends Activity {
         View v = inflator.inflate(R.layout.titleview, null);
         ((MyTextviewWhite) v.findViewById(R.id.title)).setText(this.getTitle());
         this.getActionBar().setCustomView(v);
+        back = (ImageView) findViewById(R.id.back);
 
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent open = new Intent(Library.this, MainActivity.class);
+                startActivity(open);
+                finish();
 
+            }
+        });
 
 
         cd = new ConnectionDetector(getApplicationContext());
         gridView = (GridView) findViewById(R.id.gridView);
-
 
 
         spinner1 = (Spinner) findViewById(R.id.spinner1);
@@ -233,13 +244,15 @@ public class Library extends Activity {
         }
 
 
-
-
-}
-
-
-
-
+    }
+    @Override
+    public void onBackPressed() {
+        if (pDialog.isShowing())
+            pDialog.dismiss();
+        Intent in = new Intent(Library.this, MainActivity.class);
+        startActivity(in);
+        finish();
+    }
 
 
     public class PortNumber extends AsyncTask<String, Void, String[]> {
@@ -260,6 +273,8 @@ public class Library extends Activity {
         }
 
 
+
+
         @Override
         protected void onPostExecute(String[] s) {
 
@@ -271,8 +286,12 @@ public class Library extends Activity {
             spinner1.setAdapter(adapter);
         }
 
+
     }
 }
+
+
+
 
 
 

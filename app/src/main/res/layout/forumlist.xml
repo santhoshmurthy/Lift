@@ -5,7 +5,7 @@
     android:background="#fff">
     <com.LAW.Lift.model.MyTextview
         android:id="@+id/febtext"
-        android:text="jjj"
+        android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
