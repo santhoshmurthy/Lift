@@ -30,7 +30,7 @@
         android:textSize="20sp"
         android:textAllCaps="false"
         android:id="@+id/central"
-        android:background="#e59400"
+        android:background="#f99c35"
         android:layout_below="@+id/mon"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
@@ -44,7 +44,7 @@
         android:textAllCaps="false"
         android:layout_marginTop="15dp"
         android:id="@+id/Tamil"
-        android:background="#e59400"
+        android:background="#f99c35"
         android:layout_below="@+id/central"
         android:layout_centerHorizontal="true" />
 
@@ -55,7 +55,7 @@
         android:textColor="#fff"
         android:textSize="20sp"
         android:textAllCaps="false"
-        android:background="#55a555"
+        android:background="#497e13"
         android:layout_marginTop="15dp"
         android:id="@+id/supreme"
         android:layout_below="@+id/Tamil"
@@ -67,7 +67,7 @@
         android:text="Madras High court"
         android:textColor="#fff"
         android:textSize="20sp"
-        android:background="#55a555"
+        android:background="#497e13"
         android:layout_marginTop="15dp"
         android:id="@+id/Madras"
         android:layout_below="@+id/supreme"
@@ -80,7 +80,7 @@
         android:textColor="#fff"
         android:textSize="20sp"
         android:id="@+id/forum"
-        android:background="#5f7fd4"
+        android:background="#0f76b8"
         android:layout_marginTop="15dp"
         android:layout_below="@+id/Madras"
         android:layout_centerHorizontal="true" />

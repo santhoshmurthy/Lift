@@ -11,7 +11,7 @@ import java.util.TimerTask;
 
 public class SplashScreen extends Activity {
 
-    String months;
+
     @Override
         protected void onCreate(final Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);

@@ -20,14 +20,16 @@
             android:layout_marginRight="10dp"
             android:background="@drawable/rectangle_box"
             android:layout_below="@+id/text1"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="1dp">
 
-            <com.LAW.Lift.model.MyTextview
+            <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/text2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Name :"
                 android:textAllCaps="false"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
                 android:textColor="#800000"
                 android:textSize="20sp" />
 
@@ -38,19 +40,27 @@
                 android:text="fffffffffffffffffffffff"
                 android:layout_below="@+id/text2"
                 android:textAllCaps="false"
-                android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textColor="#1c1c1c"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="4dp"
+                android:textAlignment="gravity"
+                android:lineSpacingExtra="4dp"
+                android:textSize="17sp" />
 
 
 
-            <com.LAW.Lift.model.MyTextview
+            <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/text3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Act No:"
                 android:layout_below="@+id/lawname"
                 android:textColor="#800000"
-                android:textSize="20sp" />
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="20sp"
+                android:layout_marginTop="15dp"/>
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/lawactno"
@@ -58,39 +68,56 @@
                 android:layout_height="wrap_content"
                 android:text="ffddddrffffffffffffffffffff"
                 android:textAllCaps="false"
+                android:textColor="#1c1c1c"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:textAlignment="gravity"
+                android:layout_marginTop="4dp"
+                android:lineSpacingExtra="4dp"
                 android:layout_below="@+id/text3"
-                android:textColor="#000000"
-                android:textSize="20sp" />
+
+                android:textSize="17sp" />
 
 
-            <com.LAW.Lift.model.MyTextview
+            <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/text4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Enacted by:"
                 android:layout_below="@+id/lawactno"
                 android:textColor="#800000"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"/>
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/lawenactedby"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="gggggg"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
                 android:layout_below="@+id/text4"
                 android:textAllCaps="false"
-                android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textColor="#1c1c1c"
+                android:layout_marginTop="4dp"
+                android:textAlignment="gravity"
+                android:lineSpacingExtra="4dp"
+                android:textSize="17sp" />
 
 
-            <com.LAW.Lift.model.MyTextview
+            <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/text5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/lawenactedby"
                 android:text="Received Assent of the President on:"
                 android:textColor="#800000"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"/>
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/lawreceived"
@@ -99,15 +126,22 @@
                 android:text="gggg"
                 android:layout_below="@+id/text5"
                 android:textAllCaps="false"
-                android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textColor="#1c1c1c"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="4dp"
+                android:textAlignment="gravity"
+                android:lineSpacingExtra="4dp"
+                android:textSize="17sp" />
 
-            <com.LAW.Lift.model.MyTextview
+            <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/text6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/lawreceived"
                 android:text="Published in:"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
                 android:layout_marginTop="20dp"
                 android:textColor="#800000"
                 android:textSize="20sp" />
@@ -119,15 +153,22 @@
                 android:text="rrrrrr"
                 android:layout_below="@+id/text6"
                 android:textAllCaps="false"
-                android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textColor="#1c1c1c"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:textAlignment="gravity"
+                android:layout_marginTop="4dp"
+                android:lineSpacingExtra="4dp"
+                android:textSize="17sp" />
 
-            <com.LAW.Lift.model.MyTextview
+            <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/text7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Came into Force:"
                 android:layout_marginTop="20dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
                 android:layout_below="@+id/lawpublished"
                 android:textColor="#800000"
                 android:textSize="20sp" />
@@ -139,19 +180,27 @@
                 android:text="fffff"
                 android:layout_below="@+id/text7"
                 android:textAllCaps="false"
-                android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textColor="#1c1c1c"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:textAlignment="gravity"
+                android:layout_marginTop="4dp"
+                android:lineSpacingExtra="4dp"
+                android:textSize="17sp" />
 
 
-            <com.LAW.Lift.model.MyTextview
+            <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/text8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/lawcame"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
                 android:text="Salient Features:"
                 android:textColor="#800000"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                />
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/lawsalient"
@@ -160,18 +209,26 @@
                 android:text=""
                 android:layout_below="@+id/text8"
                 android:textAllCaps="false"
-                android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textColor="#1c1c1c"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:textAlignment="gravity"
+                android:lineSpacingExtra="4dp"
+                android:textSize="17sp" />
 
-            <com.LAW.Lift.model.MyTextview
+            <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/text9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/lawsalient"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
                 android:text="Brief Details:"
                 android:textColor="#800000"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                />
 
             <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/lawbrief"
@@ -180,16 +237,23 @@
                 android:text=""
                 android:layout_below="@+id/text9"
                 android:textAllCaps="false"
-                android:textColor="#000000"
-                android:textSize="20sp" />
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="4dp"
+                android:textColor="#1c1c1c"
+                android:textAlignment="gravity"
+                android:lineSpacingExtra="4dp"
+                android:textSize="17sp" />
 
-            <com.LAW.Lift.model.MyTextview
+            <com.LAW.Lift.model.MyTextviews
                 android:id="@+id/text10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/lawbrief"
                 android:text="For Full Text:"
-                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
                 android:textColor="#800000"
                 android:textSize="20sp" />
 
@@ -200,11 +264,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Touch here"
-
-               android:clickable="true"
+                android:clickable="true"
+               android:layout_marginRight="5dp"
+               android:layout_marginLeft="5dp"
                 android:layout_below="@+id/text10"
                 android:textColor="#0000ff"
-                android:textSize="20sp" />
+                android:textSize="17sp" />
 
 
         </RelativeLayout>

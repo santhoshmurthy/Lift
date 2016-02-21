@@ -20,6 +20,7 @@ import com.LAW.Lift.common.AlertDialogManager;
 import com.LAW.Lift.common.ConnectionDetector;
 import com.LAW.Lift.model.MyTextview;
 import com.LAW.Lift.model.MyTextviewWhite;
+import com.LAW.Lift.model.MyTextviews;
 import com.LAW.Lift.model.forumcard;
 import com.LAW.Lift.model.supremecard;
 import com.android.volley.RequestQueue;
@@ -34,7 +35,7 @@ import org.json.JSONObject;
 public class Forum extends Activity {
 
     ImageView back;
-MyTextview febtext;
+MyTextviews febtext;
     public static String[] get_legislation;
     public static String[] book_name;
     public static String[] book_icon;
@@ -64,7 +65,7 @@ String  bookid;
         this.getActionBar().setDisplayShowTitleEnabled(false);
         LayoutInflater inflator = LayoutInflater.from(this);
         View v = inflator.inflate(R.layout.titleview, null);
-        febtext=(MyTextview)findViewById(R.id.febtext);
+        febtext=(MyTextviews)findViewById(R.id.febtext);
         ((MyTextviewWhite) v.findViewById(R.id.title)).setText(this.getTitle());
         this.getActionBar().setCustomView(v);
         back=(ImageView)findViewById(R.id.back);

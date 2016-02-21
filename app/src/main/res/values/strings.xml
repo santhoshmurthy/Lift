@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Law</string>
+    <string name="app_name">Lift</string>
     <string name="drawer_open">Slider Menu Opened</string>
     <string name="drawer_close">Slider Menu Closed</string>
     <string name="Home">home</string>
@@ -32,6 +32,72 @@
 
     </string-array>
 
+
+    <string name="string_central">Central Legislation</string>
+    <string name="string_tamil">Tamilnadu Legislation</string>
+    <string name="string_supreme">Supreme Court</string>
+    <string name="string_madras">Madras High Court</string>
+    <string name="string_forum">Forum</string>
+
+    <string name="logout">Logout</string>
+    <string name="string_month">February:</string>
+    <string name="central_name">Name:</string>
+    <string name="central_act">Act No:</string>
+    <string name="central_enact">Enacted by:</string>
+    <string name="central_president">Received Assent of the President on:</string>
+    <string name="central_publish">Published in:</string>
+    <string name="central_force">Came into Force:</string>
+    <string name="central_salient">Salient Features:</string>
+    <string name="central_brief">Brief Details:</string>
+    <string name="central_text">For Full Text:</string>
+
+    <string name="tamil_name">Name:</string>
+    <string name="tamil_act">Act No:</string>
+    <string name="tamil_enact">Enacted by:</string>
+    <string name="tamil_governor">Received Assent of the Governor on:</string>
+    <string name="tamil_publish">Published in:</string>
+    <string name="tamil_force">Came into Force:</string>
+    <string name="tamil_salient">Salient Features:</string>
+    <string name="tamil_brief">Brief Details:</string>
+    <string name="tamil_text">For Full Text:</string>
+
+    <string name="supreme_title">Title:</string>
+    <string name="supreme_context">Context:</string>
+    <string name="supreme_questn">Question:</string>
+    <string name="supreme_ansr">Answer:</string>
+    <string name="supreme_ref">Reference:</string>
+    <string name="supreme_text">For Full Text:</string>
+
+    <string name="madras_title">Title:</string>
+    <string name="madras_context">Context:</string>
+    <string name="madras_questn">Question:</string>
+    <string name="madras_ansr">Answer:</string>
+    <string name="madras_ref">Reference:</string>
+    <string name="madras_text">For Full Text:</string>
+
+    <string name="forum_thought">Thought For the Month</string>
+    <string name="forum_jun">Junior:</string>
+    <string name="forum_sen">Senior:</string>
+    <string name="forum_team">LIFT TEAM</string>
+
+    <string name="forum_judic">Judicial Appoinments:</string>
+    <string name="forum_junior">Junior:</string>
+    <string name="forum_senior">Senior</string>
+    <string name="forum_team2">LIFT TEAM</string>
+
+
+    <string name="forum_all">Dear All,</string>
+    <string name="forum_team3">LIFT TEAM</string>
+
+    <string name="lang">English</string>
+
+
+
+
+
+
+
+
   <array name="nav_drawer_icons">
 
 
@@ -39,5 +105,5 @@
   <!-- <item>@drawable/earn</item>&ndash;&gt;-->
        <!-- &lt;!&ndash;<item>@drawable/sa</item>&ndash;&gt;-->
     </array>
-    <string name="logout">Logout</string>
+
 </resources>

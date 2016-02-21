@@ -20,6 +20,7 @@ import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -77,18 +78,18 @@ public class CentralLegislation extends Activity {
     public static String[] brief_deatils;
     public static String[] ref_url;
     String jsonResponse;
-    String Url,lawname, lawactno, lawenactedby, lawreceived,lawpublished,lawcame,lawsalient,lawbrief,lawfull;
+    String Url, lawname, lawactno, lawenactedby, lawreceived, lawpublished, lawcame, lawsalient, lawbrief, lawfull;
     ProgressDialog pDialog;
     AlertDialogManager alert = new AlertDialogManager();
     ConnectionDetector cd;
     String urlJsonArry = "http://www.lawinfingertips.com/webservice/Lift_Final/get_legislation.php?book_id=";
-   String half ="&type=central";
+    String half = "&type=central";
     ListView listView;
     String bookid;
+    Button button2;
+    MyTextviews febcentral;
 
-     MyTextview febcentral;
-
-String months;
+    String months;
     private CardArrayAdapter rideadapter;
 
 
@@ -98,16 +99,15 @@ String months;
         setContentView(R.layout.central);
 
 
-
         this.getActionBar().setDisplayShowCustomEnabled(true);
         this.getActionBar().setDisplayShowTitleEnabled(false);
         LayoutInflater inflator = LayoutInflater.from(this);
         View v = inflator.inflate(R.layout.titleview, null);
-
         ((MyTextviewWhite) v.findViewById(R.id.title)).setText(this.getTitle());
         this.getActionBar().setCustomView(v);
 
-        back=(ImageView)findViewById(R.id.back);
+
+        back = (ImageView) findViewById(R.id.back);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,28 +118,26 @@ String months;
 
             }
         });
-        febcentral=(MyTextview)findViewById(R.id.febcentral);
+        febcentral = (MyTextviews) findViewById(R.id.febcentral);
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             //bus_names=extras.getStringArray("BusNames");
 
             bookid = extras.getString("book_id");
-            months=extras.getString("month");
+            months = extras.getString("month");
 
-            Log.d("central",bookid+months);
+            Log.d("central", bookid + months);
             //Toast.makeText(Booking.this,sname+"\n"+slat+"\n"+slong, Toast.LENGTH_SHORT).show();
         }
 
 
         febcentral.setText(months);
         cd = new ConnectionDetector(getApplicationContext());
-        listView = (ListView)findViewById(R.id.listView);
+        listView = (ListView) findViewById(R.id.listView);
 
         rideadapter = new CardArrayAdapter(CentralLegislation.this, R.layout.centrallegistation);
         listView.setAdapter(rideadapter);
-
-
 
 
         if (!cd.isConnectingToInternet()) {
@@ -154,10 +152,9 @@ String months;
             pDialog.show();
 
 
-
             RequestQueue queue = MyVolley.getRequestQueue();
 
-            JsonObjectRequest req = new JsonObjectRequest(urlJsonArry+bookid+half,null,
+            JsonObjectRequest req = new JsonObjectRequest(urlJsonArry + bookid + half, null,
                     new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
@@ -165,7 +162,7 @@ String months;
                             try {
                                 Log.e("History", "response.get_legislation" + response);
 
-                                JSONObject jobject =response;
+                                JSONObject jobject = response;
 
                                 JSONArray jsonMainArr = jobject.getJSONArray("get_legislation");
 
@@ -218,7 +215,7 @@ String months;
                                     lawfull = person.getString("ref_url");
 
 
-                                    months=person.getString("month");
+                                    months = person.getString("month");
 
 
                                     Card card = new Card(lawname, lawactno, lawenactedby, lawreceived, lawpublished, lawcame, lawsalient, lawbrief, lawfull);
@@ -244,7 +241,7 @@ String months;
                 public void onErrorResponse(VolleyError error) {
                     if (pDialog.isShowing())
                         pDialog.dismiss();
-                    Log.e("Hiistory","error  "+error);
+                    Log.e("Hiistory", "error  " + error);
                     // listView.setVisibility(View.GONE);
                 }
 

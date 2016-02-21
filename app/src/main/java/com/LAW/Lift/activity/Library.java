@@ -247,8 +247,7 @@ public class Library extends Activity {
     }
     @Override
     public void onBackPressed() {
-        if (pDialog.isShowing())
-            pDialog.dismiss();
+
         Intent in = new Intent(Library.this, MainActivity.class);
         startActivity(in);
         finish();

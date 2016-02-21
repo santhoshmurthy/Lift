@@ -117,13 +117,7 @@ public class MainActivity extends FragmentActivity {
         ((MyTextviewWhite) v.findViewById(R.id.title)).setText(this.getTitle());
         this.getActionBar().setCustomView(v);
 
-        ((Button) v.findViewById(R.id.button2)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivityForResult(intent, 1);
-            }
-        });
+
 
 
         mTitle = mDrawerTitle = getTitle();
@@ -322,12 +316,10 @@ public class MainActivity extends FragmentActivity {
                 fragment.setArguments(bundle3);
                 break;
 
-
-
             case 1:
                 Intent l=new Intent(MainActivity.this,Library.class);
                 startActivity(l);
-                finish();
+
                 break;
             case 2:
                 Bundle bundle=new Bundle();
@@ -434,18 +426,19 @@ public class MainActivity extends FragmentActivity {
 
 
 
-   /* @Override
+    @Override
     public void onBackPressed() {
         finish();
-     *//*   if (getFragmentManager().findFragmentByTag("Frag1") != null) {
-            getFragmentManager().popBackStackImmediate("Frag1",0);
-            finish();
-        } else {
-            super.onBackPressed();
-            Intent in = new Intent(MainActivity.this,MainActivity.class);
-            startActivity(in);*//*
+       /* if (getFragmentManager().findFragmentByTag("Frag1") != null) {
+            getFragmentManager().popBackStackImmediate("Frag1", 0);
 
-        }*/
+        } else {*//**/
+            /*super.onBackPressed();
+            Intent in = new Intent(MainActivity.this, MainActivity.class);
+            startActivity(in);*/
+
+        }
+
 
     private void hideKeyboard() {
         InputMethodManager inputMethodManager = (InputMethodManager)  this.getSystemService(Activity.INPUT_METHOD_SERVICE);

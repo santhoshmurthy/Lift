@@ -20,7 +20,7 @@
         android:layout_width="240dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="#0D1E38"
+        android:background="#e59400"
         android:orientation="vertical">
 
         <ListView
@@ -29,8 +29,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:choiceMode="singleChoice"
-            android:divider="@drawable/list_divider"
-            android:dividerHeight="1dp"
+            android:divider="#fff"
+            android:dividerHeight="0dp"
             android:listSelector="@drawable/list_selector" />
 
     </RelativeLayout>

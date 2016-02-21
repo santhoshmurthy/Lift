@@ -1,18 +1,33 @@
 package com.LAW.Lift.adapter;
 
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Environment;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.LAW.Lift.R;
+import com.LAW.Lift.activity.TamilLegislation;
 import com.LAW.Lift.model.legislationcard;
 
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,13 +38,24 @@ public class legislationadapter extends ArrayAdapter<legislationcard> {
 
     String bus_id_item;
     int textViewResourceId;
+    public static final int DIALOG_DOWNLOAD_PROGRESS = 0;
+    private Button startBtn;
+    private ProgressDialog mProgressDialog;
 
+    Context mcontext;
+    String Link;
     //Map<String, String> addToCartMap = new HashMap<>();
+    File pdfFile = new File(Environment
+            .getExternalStorageDirectory(),"lift.pdf");
+    //Map<String, String> addToCartMap = new HashMap<>();
+
+
 
     public legislationadapter(Context context, int textViewResourceId) {
 
         super(context, textViewResourceId);
         this.textViewResourceId = textViewResourceId;
+        this.mcontext=context;
     }
 
     @Override
@@ -65,7 +91,10 @@ public class legislationadapter extends ArrayAdapter<legislationcard> {
             viewHolder.line7 = (TextView) row.findViewById(R.id.tamilsalient);
             viewHolder.line8 = (TextView) row.findViewById(R.id.tamilbrief);
             viewHolder.line9 = (TextView) row.findViewById(R.id.tamilfulltext);
-
+            mProgressDialog = new ProgressDialog(mcontext);
+            mProgressDialog.setMessage("Downloading file..");
+            mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+            mProgressDialog.setCancelable(false);
             //viewHolder.line2 = (TextView) row.findViewById(R.id.bus_location);
             //viewHolder.line3 = (TextView) row.findViewById(R.id.bus_time);
             row.setTag(viewHolder);
@@ -171,6 +200,16 @@ public class legislationadapter extends ArrayAdapter<legislationcard> {
             if (line8 != null)
                 line8.setText(Html.fromHtml(legislationcard.gettamilsalient()).toString());
         }
+
+
+
+        viewHolder.line9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Link = TamilLegislation.ref_url[position];
+                startDownload();
+            }
+        });
         return row;
     }
 
@@ -196,6 +235,75 @@ public class legislationadapter extends ArrayAdapter<legislationcard> {
         TextView line7;
         TextView line8;
         TextView line9;
+    }
+
+    private void startDownload() {
+        //String url = "http://farm1.static.flickr.com/114/298125983_0e4bf66782_b.jpg";
+        new DownloadFileAsync().execute(Link);
+    }
+
+    class DownloadFileAsync extends AsyncTask<String, String, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            mProgressDialog.show();
+            mProgressDialog.setProgress(DIALOG_DOWNLOAD_PROGRESS);
+        }
+
+        @Override
+        protected String doInBackground(String... aurl) {
+            int count;
+
+            try {
+
+                URL url = new URL(aurl[0]);
+                URLConnection conexion = url.openConnection();
+                conexion.connect();
+
+                int lenghtOfFile = conexion.getContentLength();
+                Log.d("ANDRO_ASYNC", "Length of file: " + lenghtOfFile);
+
+                InputStream input = new BufferedInputStream(url.openStream());
+                OutputStream output = new FileOutputStream("/sdcard/" + "lift.pdf");
+
+                byte data[] = new byte[1024];
+
+                long total = 0;
+
+                while ((count = input.read(data)) != -1) {
+                    total += count;
+                    publishProgress("" + (int) ((total * 100) / lenghtOfFile));
+                    output.write(data, 0, count);
+                }
+
+                output.flush();
+                output.close();
+                input.close();
+            } catch (Exception e) {
+            }
+            return null;
+
+        }
+
+        protected void onProgressUpdate(String... progress) {
+            Log.d("ANDRO_ASYNC", progress[0]);
+            mProgressDialog.setProgress(Integer.parseInt(progress[0]));
+        }
+
+        @Override
+        protected void onPostExecute(String unused) {
+            mProgressDialog.dismiss();
+
+
+            Uri path = Uri.fromFile(pdfFile);
+            Intent objIntent = new Intent(Intent.ACTION_VIEW);
+            objIntent.setDataAndType(path, "application/pdf");
+            objIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            mcontext.startActivity(objIntent);
+
+
+        }
     }
 }
 

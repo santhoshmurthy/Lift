@@ -4,12 +4,12 @@
     android:layout_height="match_parent"
     android:background="#fff">
 
-    <TextView
+    <com.LAW.Lift.model.MyTextviews
         android:id="@+id/textsupreme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
-        android:textColor="#4c4c4c"
+        android:textColor="#1c1c1c"
         android:textSize="20sp"
         android:layout_centerHorizontal="true"
         android:padding="5dp"/>

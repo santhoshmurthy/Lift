@@ -3,44 +3,45 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff">
+<RelativeLayout
+    android:id="@+id/rl1"
+    android:layout_width="400dp"
+    android:layout_marginTop="5dp"
+    android:layout_height="50dp"
+    android:background="#e59400">
 
-
-    <com.LAW.Lift.model.MyTextview
+    <com.LAW.Lift.model.MyTextviews
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Proclaimer and Disclaimer"
         android:gravity="center"
         android:id="@+id/textView25"
         android:textSize="22sp"
-        android:layout_marginLeft="50dp"
-        android:textColor="#000"
-        android:layout_marginTop="10dp"
-        android:layout_alignParentTop="true"
-       />
 
+
+        android:textColor="#fff"
+        android:layout_centerInParent="true"
+       />
+</RelativeLayout>
 
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="10dp">
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/rl1">
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/line1"
-                android:layout_width="1000dp"
-                android:layout_height="40dp"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp"
-                android:src="@drawable/line_bar" />
+            android:layout_height="wrap_content"
+            >
+
 
             <com.LAW.Lift.model.MyTextview
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="LIFT Proclaims :"
                 android:textColor="#4c4c4c"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:layout_marginLeft="10dp"
                 android:layout_below="@+id/line1"
                 android:id="@+id/textView21" />
@@ -50,8 +51,10 @@
                 android:layout_height="wrap_content"
                 android:text="A society requires a good legal system to exist and function smoothly; and the people of that society require and deserve legal awareness and the resultant access; which can be created only by provision of updated dissemination of relevant information. We, here at LIFT believe that Smart Phones, Tablets and the Internet are the perfect media for this propagation. LIFT, a free Legal App, joins hands with you and the law in the March ahead. LIFT is Legal Information Fast Track."
                 android:layout_marginLeft="10dp"
-                android:textColor="#4c4c4c"
-                android:textSize="20sp"
+                android:textColor="#1c1c1c"
+                android:textSize="18sp"
+                android:textAlignment="gravity"
+                android:lineSpacingExtra="4dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_below="@+id/textView21"
@@ -61,7 +64,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="LIFT Disclaims :"
-                android:textSize="22sp"
+                android:textSize="20sp"
+
                 android:textColor="#4c4c4c"
                 android:layout_marginTop="12dp"
                 android:layout_marginLeft="10dp"
@@ -72,8 +76,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="The content of LIFT is as per the perspective and understanding of the authors, in the words and phrases of their choice; Miniscule human errors are possible; Users are to apply and use LIFT material entirely on their own prudence and judgment; LIFT provides only select legal material and is not exhaustive."
-                android:textColor="#4c4c4c"
-                android:textSize="20sp"
+                android:textColor="#1c1c1c"
+                android:textSize="18sp"
+                android:textAlignment="gravity"
+                android:lineSpacingExtra="4dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="10dp"
