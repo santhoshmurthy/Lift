@@ -84,7 +84,7 @@ String  bookid;
 
             bookid = extras.getString("book_id");
             months=extras.getString("month");
-            Log.d("forum",bookid);
+
             //Toast.makeText(Booking.this,sname+"\n"+slat+"\n"+slong, Toast.LENGTH_SHORT).show();
         }
         cd = new ConnectionDetector(getApplicationContext());

@@ -1,11 +1,15 @@
 package com.LAW.Lift.activity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.app.ShareCompat;
@@ -13,6 +17,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -26,6 +33,7 @@ import com.LAW.Lift.common.ConnectionDetector;
 import com.LAW.Lift.model.Card;
 import com.LAW.Lift.model.MyTextview;
 import com.LAW.Lift.model.MyTextviewWhite;
+import com.LAW.Lift.model.MyTextviews;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -37,8 +45,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedInputStream;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.List;
 
 import static android.support.v4.app.ActivityCompat.startActivity;
@@ -63,7 +77,7 @@ public class CentralLegislation extends Activity {
     public static String[] brief_deatils;
     public static String[] ref_url;
     String jsonResponse;
-    String lawname, lawactno, lawenactedby, lawreceived,lawpublished,lawcame,lawsalient,lawbrief,lawfulltext;
+    String Url,lawname, lawactno, lawenactedby, lawreceived,lawpublished,lawcame,lawsalient,lawbrief,lawfull;
     ProgressDialog pDialog;
     AlertDialogManager alert = new AlertDialogManager();
     ConnectionDetector cd;
@@ -71,7 +85,9 @@ public class CentralLegislation extends Activity {
    String half ="&type=central";
     ListView listView;
     String bookid;
+
      MyTextview febcentral;
+
 String months;
     private CardArrayAdapter rideadapter;
 
@@ -81,12 +97,16 @@ String months;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.central);
 
+
+
         this.getActionBar().setDisplayShowCustomEnabled(true);
         this.getActionBar().setDisplayShowTitleEnabled(false);
         LayoutInflater inflator = LayoutInflater.from(this);
         View v = inflator.inflate(R.layout.titleview, null);
+
         ((MyTextviewWhite) v.findViewById(R.id.title)).setText(this.getTitle());
         this.getActionBar().setCustomView(v);
+
         back=(ImageView)findViewById(R.id.back);
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -195,20 +215,21 @@ String months;
                                     lawcame = person.getString("came_in_force");
                                     lawsalient = person.getString("salient_features");
                                     lawbrief = person.getString("brief_deatils");
-                                    lawfulltext = person.getString("ref_url");
+                                    lawfull = person.getString("ref_url");
 
 
                                     months=person.getString("month");
 
 
-                                    Card card = new Card(lawname, lawactno, lawenactedby, lawreceived, lawpublished, lawcame, lawsalient, lawbrief, lawfulltext);
+                                    Card card = new Card(lawname, lawactno, lawenactedby, lawreceived, lawpublished, lawcame, lawsalient, lawbrief, lawfull);
                                     rideadapter.add(card);
 
-
                                 }
+
                                 if (pDialog.isShowing())
                                     pDialog.dismiss();
                                 //mTvResult.setText(jsonResponse);
+
 
                             } catch (JSONException e) {
                                 e.printStackTrace();
@@ -234,20 +255,107 @@ String months;
         }
     }
 
+   /* private void startDownload() {
+        Log.d("abcdef", "" + Url);
+        if (Url == null || Url == "" || Url == " ") {
+            AlertDialog alertDialog = new AlertDialog.Builder(
+                    CentralLegislation.this).create();
 
-   /* public boolean onOptionsItemSelected(MenuItem item){
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                Intent intent = new Intent(this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                finish();
-                return true;
+
+            alertDialog.setMessage("There is No Download  Link Available");
+
+            alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            });
+            alertDialog.show();
+
+        } else {
+            // String url = "https://s3.amazonaws.com/streetsmartb2/chauffers/Naukri.com.apk";
+            new DownloadFileAsync().execute(Url);
+        }
+    }
+
+    @Override
+    protected Dialog onCreateDialog(int id) {
+        switch (id) {
+            case DIALOG_DOWNLOAD_PROGRESS:
+
+                mProgressDialog.setTitle(lawfull);
+                mProgressDialog.setMessage("Downloading " + lawfull );
+                mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+                mProgressDialog.setCancelable(true);
+                mProgressDialog.show();
+                return mProgressDialog;
             default:
-                return super.onOptionsItemSelected(item);
+                return null;
+        }
+    }
+
+
+    class DownloadFileAsync extends AsyncTask<String, String, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+        }
+
+
+        @Override
+        protected String doInBackground(String... aurl) {
+            int count;
+
+            try {
+
+                URL url = new URL(aurl[0]);
+                URLConnection conexion = url.openConnection();
+                conexion.connect();
+
+                int lenghtOfFile = conexion.getContentLength();
+                Log.d("ANDRO_ASYNC", "Lenght of file: " + lenghtOfFile);
+
+                InputStream input = new BufferedInputStream(url.openStream());
+
+                OutputStream output = new FileOutputStream("/sdcard/" + lawfull);
+
+
+                byte data[] = new byte[1024];
+
+                long total = 0;
+
+                while ((count = input.read(data)) != -1) {
+                    total += count;
+
+                    publishProgress("" + (int) ((total * 100) / lenghtOfFile));
+
+                    output.write(data, 0, count);
+                }
+
+                output.flush();
+                output.close();
+                input.close();
+
+            } catch (Exception e) {
+            }
+            return null;
+
+        }
+
+        @Override
+        protected void onPostExecute(String unused) {
+
+            File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/example.pdf");
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setDataAndType(Uri.fromFile(file), "file://" + "/sdcard/" + lawfull);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+
+
         }
     }
 */
+
     @Override
     public void onBackPressed() {
         if (pDialog.isShowing())

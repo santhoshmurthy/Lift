@@ -87,6 +87,45 @@ public class highcourtadapter extends ArrayAdapter<highcourtcard> {
         viewHolder.line5.setSelected(true);
         viewHolder.line6.setSelected(true);
 
+
+
+        if(highcourtcard.gethighpara().equals("")){
+            viewHolder.line1.setText("Content not uploaded");
+        }else {
+            viewHolder.line1.setText(highcourtcard.gethighpara());
+        }
+
+
+        if(highcourtcard.getcontexthigh().equals("")){
+            viewHolder.line2.setText("Content not uploaded");
+        }else {
+            viewHolder.line2.setText(highcourtcard.getcontexthigh());
+        }
+
+        if(highcourtcard.getquestionhigh().equals("")){
+            viewHolder.line3.setText("Content not uploaded");
+        }else {
+            viewHolder.line3.setText(highcourtcard.getquestionhigh());
+        }
+
+        if(highcourtcard.getanswerhigh().equals("")){
+            viewHolder.line4.setText("Content not uploaded");
+        }else {
+            viewHolder.line4.setText(highcourtcard.getanswerhigh());
+        }
+
+        if(highcourtcard.getreferencehigh().equals("")){
+            viewHolder.line5.setText("Content not uploaded");
+        }else {
+            viewHolder.line5.setText(highcourtcard.getreferencehigh());
+        }
+        if(highcourtcard.gettexthigh().equals("")){
+            viewHolder.line6.setText("Content not uploaded");
+        }else {
+            viewHolder.line6.setText(highcourtcard.gettexthigh());
+        }
+
+
         if (row != null) {
             TextView line3 = (TextView) row.findViewById(R.id.questionhigh);
 

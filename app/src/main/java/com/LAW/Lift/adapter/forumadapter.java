@@ -77,6 +77,26 @@ public class forumadapter extends ArrayAdapter<forumcard> {
         viewHolder.line1.setSelected(true);
         viewHolder.line2.setSelected(true);
         viewHolder.line3.setSelected(true);
+
+
+        if(forumcard.getthoughttext().equals("")){
+            viewHolder.line1.setText("Content not uploaded");
+        }else {
+            viewHolder.line1.setText(forumcard.getthoughttext());
+        }
+
+
+        if(forumcard.getjuniortext().equals("")){
+            viewHolder.line2.setText("Content not uploaded");
+        }else {
+            viewHolder.line2.setText(forumcard.getjuniortext());
+        }
+        if(forumcard.getauthor().equals("")){
+            viewHolder.line3.setText("Content not uploaded");
+        }else {
+            viewHolder.line3.setText(forumcard.getauthor());
+        }
+
         if (row != null) {
             TextView line1 = (TextView) row.findViewById(R.id.thoughttext);
 

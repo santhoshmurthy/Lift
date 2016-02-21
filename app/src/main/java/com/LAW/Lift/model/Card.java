@@ -1,7 +1,7 @@
 package com.LAW.Lift.model;
 
 public class Card {
-    String lawname, lawactno, lawenactedby, lawreceived, lawpublished, lawcame,lawsalient,lawbrief,lawfulltext;
+    String lawname, lawactno, lawenactedby, lawreceived, lawpublished, lawcame,lawsalient,lawbrief,lawfull;
     public Card(String lawname,String lawactno,String lawenactedby,String lawreceived,String lawpublished,String lawcame,String lawsalient,String lawbrief,String lawfulltext) {
         this.lawname = lawname;
         this.lawactno = lawactno;
@@ -11,7 +11,7 @@ public class Card {
         this.lawcame = lawcame;
         this.lawsalient = lawsalient;
         this.lawbrief = lawbrief;
-        this.lawfulltext = lawfulltext;
+        this.lawfull = lawfulltext;
 
     }
 
@@ -40,7 +40,7 @@ public class Card {
         return lawbrief;
     }
     public String getlawfulltext() {
-        return lawfulltext;
+        return lawfull;
     }
     //public String getLine2() {return line2;}
 

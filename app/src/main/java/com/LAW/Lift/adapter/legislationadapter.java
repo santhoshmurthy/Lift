@@ -92,6 +92,68 @@ public class legislationadapter extends ArrayAdapter<legislationcard> {
         viewHolder.line7.setSelected(true);
         viewHolder.line8.setSelected(true);
         viewHolder.line9.setSelected(true);
+
+
+
+        if(legislationcard.gettamilname().equals("")){
+            viewHolder.line1.setText("Content not uploaded");
+        }else {
+            viewHolder.line1.setText(legislationcard.gettamilname());
+        }
+
+        if(legislationcard.gettamilactno().equals("")){
+            viewHolder.line2.setText("Content not uploaded");
+        }else {
+            viewHolder.line2.setText(legislationcard.gettamilactno());
+        }
+
+        if(legislationcard.gettamilenactedby().equals("")){
+            viewHolder.line3.setText("Content not uploaded");
+        }else {
+            viewHolder.line3.setText(legislationcard.gettamilenactedby());
+        }
+
+
+        if(legislationcard.gettamilreceived().equals("")){
+            viewHolder.line4.setText("Content not uploaded");
+        }else {
+            viewHolder.line4.setText(legislationcard.gettamilreceived());
+        }
+
+        if(legislationcard.gettamilpublished().equals("")){
+            viewHolder.line5.setText("Content not uploaded");
+        }else {
+            viewHolder.line5.setText(legislationcard.gettamilpublished());
+        }
+
+        if(legislationcard.gettamilcame().equals("")){
+            viewHolder.line6.setText("Content not uploaded");
+        }else {
+            viewHolder.line6.setText(legislationcard.gettamilcame());
+        }
+
+        if(legislationcard.gettamilsalient().equals("")){
+            viewHolder.line7.setText("Content not uploaded");
+        }else {
+            viewHolder.line7.setText(legislationcard.gettamilsalient());
+        }
+
+        if(legislationcard.gettamilbrief().equals("")){
+            viewHolder.line8.setText("Content not uploaded");
+        }else {
+            viewHolder.line8.setText(legislationcard.gettamilbrief());
+        }
+
+
+        if(legislationcard.gettamilfulltext().equals("")){
+            viewHolder.line9.setText("Content not uploaded");
+        }else {
+            viewHolder.line9.setText(legislationcard.gettamilfulltext());
+        }
+
+
+
+
         if (row != null) {
             TextView line7 = (TextView) row.findViewById(R.id.tamilsalient);
 

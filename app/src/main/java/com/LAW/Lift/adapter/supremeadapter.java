@@ -88,6 +88,42 @@ public class supremeadapter  extends ArrayAdapter<supremecard> {
         viewHolder.line4.setSelected(true);
         viewHolder.line5.setSelected(true);
         viewHolder.line6.setSelected(true);
+
+
+
+        if(supremecard.gettitlepara().equals("")){
+            viewHolder.line1.setText("Content not uploaded");
+        }else {
+            viewHolder.line1.setText(supremecard.gettitlepara());
+        }
+        if(supremecard.getcontextpara().equals("")){
+            viewHolder.line2.setText("Content not uploaded");
+        }else {
+            viewHolder.line2.setText(supremecard.getcontextpara());
+        }
+        if(supremecard.getquestionpara().equals("")){
+            viewHolder.line3.setText("Content not uploaded");
+        }else {
+            viewHolder.line3.setText(supremecard.getquestionpara());
+        }
+        if(supremecard.getanswerpara().equals("")){
+            viewHolder.line4.setText("Content not uploaded");
+        }else {
+            viewHolder.line4.setText(supremecard.getanswerpara());
+        }
+        if(supremecard.getreferencepara().equals("")){
+            viewHolder.line5.setText("Content not uploaded");
+        }else {
+            viewHolder.line5.setText(supremecard.getreferencepara());
+        }
+
+        if(supremecard.gettexttouch().equals("")){
+            viewHolder.line6.setText("Content not uploaded");
+        }else {
+            viewHolder.line6.setText(supremecard.gettexttouch());
+        }
+
+
         if (row != null) {
             TextView line3 = (TextView) row.findViewById(R.id.questionpara);
 

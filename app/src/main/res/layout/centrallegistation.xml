@@ -195,12 +195,12 @@
 
 
 
-           <com.LAW.Lift.model.MyTextviews
-                android:id="@+id/lawfulltext"
+           <TextView
+                android:id="@+id/lawfull"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Touch here"
-               android:onClick="onClick"
+
                android:clickable="true"
                 android:layout_below="@+id/text10"
                 android:textColor="#0000ff"

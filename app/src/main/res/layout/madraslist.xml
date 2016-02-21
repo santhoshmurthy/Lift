@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="#fff">
 
-    <TextView
+    <com.LAW.Lift.model.MyTextview
         android:id="@+id/madrastext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
