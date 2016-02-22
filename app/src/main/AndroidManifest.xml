@@ -65,8 +65,6 @@
             />
 
 
-        <activity android:name=".activity.Languagechange"
-            android:configChanges="locale|orientation"/>
     </application>
 
 </manifest>

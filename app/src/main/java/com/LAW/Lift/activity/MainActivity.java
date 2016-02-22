@@ -7,6 +7,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.FragmentActivity;
@@ -14,6 +15,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -29,6 +31,7 @@ import android.widget.TextView;
 import com.LAW.Lift.R;
 import com.LAW.Lift.adapter.CardArrayAdapter;
 import com.LAW.Lift.adapter.mainadapter;
+import com.LAW.Lift.app.LiftApplication;
 import com.LAW.Lift.app.MyVolley;
 import com.LAW.Lift.fragments.AboutFragment;
 import com.LAW.Lift.fragments.BookingFragment;
@@ -51,6 +54,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class MainActivity extends FragmentActivity {
     private Button central,Tamil,supreme,Madras,forum;
@@ -67,10 +71,14 @@ public class MainActivity extends FragmentActivity {
     private mainadapter adaps;
     String months,bookid,yearss;
     ProgressDialog pDialog;
+    public static String Language="English";
     String urlJsonArry = "http://www.lawinfingertips.com/webservice/Lift_Final/lift_of_the_month.php?id=1";
     private RelativeLayout mDrawerRelativeLayout;
     private ActionBarDrawerToggle mDrawerToggle;
     private CharSequence mDrawerTitle;
+
+
+
     /* Calendar mcurrentTime = Calendar.getInstance();
      final int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
      final int minute = mcurrentTime.get(Calendar.MINUTE);
@@ -79,7 +87,9 @@ public class MainActivity extends FragmentActivity {
      final int date=mcurrentTime.get(Calendar.DATE);*/
     // used to store app title
     private CharSequence mTitle;
-
+    Button lang;
+    Locale myLocale;
+    String eng="English";
     // slide menu items
     private String[] navMenuTitles;
     private TypedArray navMenuIcons;
@@ -95,6 +105,9 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        LiftApplication.getInstance().trackScreenView("Main activity");
+
         android.app.ActionBar ab = getActionBar();
 
         this.getActionBar().setDisplayShowCustomEnabled(true);
@@ -195,15 +208,52 @@ public class MainActivity extends FragmentActivity {
 
         }
 
+        lang=(Button) findViewById(R.id.button2);
+        lang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Language = lang.getText().toString();
+                Log.d("Language", "" + Language);
+                setLocale("ta");
+                if (Language.equals(eng)) {
+
+                    setLocale("");
+                }
+
+              /*  Toast.makeText(MainActivity.this,
+                        "You have selected Tamil", Toast.LENGTH_SHORT)
+                        .show();*/
+            /*  android.content.res.Resources res = getResources();
+                String central = res.getString(R.string.central);*/
+/*
+// Set the string to the textview
+                TextView helloTextView;
+                helloTextView = (TextView)findViewById(R.id.hello_world_textview);
+                helloTextView.setText(helloWorld);*/
+
+
+            }
+        });
 
 
     }
+
         @Override
         public boolean onCreateOptionsMenu (Menu menu){
             getMenuInflater().inflate(R.menu.main, menu);
             return true;
         }
-
+    public void setLocale(String lang) {
+        // lang.setText("English");
+        myLocale = new Locale(lang);
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = myLocale;
+        res.updateConfiguration(conf, dm);
+        Intent refresh = new Intent(MainActivity.this,MainActivity.class);
+        startActivity(refresh);
+    }
         @Override
         public boolean onOptionsItemSelected (MenuItem item){
             // toggle nav drawer on selecting action bar app icon/title

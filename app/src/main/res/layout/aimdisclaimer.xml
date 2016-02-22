@@ -13,7 +13,7 @@
     <com.LAW.Lift.model.MyTextviews
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Proclaimer and Disclaimer"
+        android:text="@string/textView25"
         android:gravity="center"
         android:id="@+id/textView25"
         android:textSize="22sp"
@@ -39,7 +39,7 @@
             <com.LAW.Lift.model.MyTextview
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="LIFT Proclaims :"
+                android:text="@string/textView21"
                 android:textColor="#4c4c4c"
                 android:textSize="20sp"
                 android:layout_marginLeft="10dp"
@@ -49,7 +49,7 @@
             <com.LAW.Lift.model.MyTextviews
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="A society requires a good legal system to exist and function smoothly; and the people of that society require and deserve legal awareness and the resultant access; which can be created only by provision of updated dissemination of relevant information. We, here at LIFT believe that Smart Phones, Tablets and the Internet are the perfect media for this propagation. LIFT, a free Legal App, joins hands with you and the law in the March ahead. LIFT is Legal Information Fast Track."
+                android:text="@string/textView22"
                 android:layout_marginLeft="10dp"
                 android:textColor="#1c1c1c"
                 android:textSize="18sp"
@@ -63,7 +63,7 @@
             <com.LAW.Lift.model.MyTextview
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="LIFT Disclaims :"
+                android:text="@string/textView23"
                 android:textSize="20sp"
 
                 android:textColor="#4c4c4c"
@@ -75,7 +75,7 @@
             <com.LAW.Lift.model.MyTextviews
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="The content of LIFT is as per the perspective and understanding of the authors, in the words and phrases of their choice; Miniscule human errors are possible; Users are to apply and use LIFT material entirely on their own prudence and judgment; LIFT provides only select legal material and is not exhaustive."
+                android:text="@string/textView24"
                 android:textColor="#1c1c1c"
                 android:textSize="18sp"
                 android:textAlignment="gravity"

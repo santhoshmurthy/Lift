@@ -14,7 +14,7 @@
     <com.LAW.Lift.model.MyTextviews
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="About Us"
+        android:text="@string/textView13"
         android:textColor="#fff"
         android:textSize="25sp"
         android:id="@+id/textView13"
@@ -40,8 +40,8 @@
     <com.LAW.Lift.model.MyTextviews
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LIFT (Law in Finger Tips) is easy access to Indian Law. With a strong and crystal clear mission to provide greatly useful legal information in a well cut-out and simple, yet proficient and professional manner to the needs of experts as well as those of the general public, every month LIFT presents carefully and viably selected Legislations of the Union of India and the State of Tamil Nadu, decided cases of the Supreme Court of India and the Madras High Court in an exceptional style. Furthermore it contains a ‘Forum’ section containing related information and tips in an interesting fashion. Every section of the content made available, is written by highly experienced professionals who are very much in active practice and hence understand the needs of all users, thereby making this app extremely useful and highly trustable. The fact that content is available in both English and Tamil, for free, doubles the already high utility and value of this app."
-        android:layout_below="@+id/line1"
+        android:text="@string/textView11"
+
         android:layout_marginLeft="10dp"
         android:textColor="#1c1c1c"
         android:textAlignment="gravity"
@@ -54,7 +54,7 @@
     <com.LAW.Lift.model.MyTextviews
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LIFT grants permission to its users to copy, reproduce, and print or use the content of all the five sections of the ‘LIFT of the Month’ for their professional / personal use, except commercial exploitation. LIFT INDIA only reserves its rights of the name, logo and its one-of-a-kind format."
+        android:text="@string/textView12"
         android:textColor="#1c1c1c"
         android:textAlignment="gravity"
         android:textSize="18sp"

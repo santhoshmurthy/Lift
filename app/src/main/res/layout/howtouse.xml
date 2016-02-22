@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="How To Use"
+        android:text="@string/textView20"
         android:textSize="25sp"
         android:textColor="#fff"
 
@@ -44,7 +44,7 @@
                 android:lineSpacingExtra="4dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:text="* All the five sections of the Monthly LIFT content are in the main display.  Users can touch and access the same. Content will be displayed if only your device is connected to the internet."
+                android:text="@string/textView14"
                 android:layout_below="@+id/line1"
                 android:id="@+id/textView14" />
 
@@ -81,7 +81,7 @@
             <com.LAW.Lift.model.MyTextviews
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="* LIFT icon in the drop down provides information About the App, How to Use, Aim and Disclaimer and Contact."
+                android:text=""
                 android:textColor="#1c1c1c"
                 android:textSize="18sp"
 
@@ -99,7 +99,6 @@
                 android:text="@string/textView18"
                 android:textColor="#1c1c1c"
                 android:textSize="18sp"
-
                 android:textAlignment="gravity"
                 android:lineSpacingExtra="4dp"
                 android:layout_marginTop="3dp"
@@ -111,7 +110,7 @@
             <com.LAW.Lift.model.MyTextviews
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="* SEARCH icon enables searching the legislation and case law sections by any key word. Touch the icon, then select the section and then key in the word for search and you will find the relevant pages displayed."
+                android:text=". "
                 android:textColor="#1c1c1c"
                 android:textSize="18sp"
 

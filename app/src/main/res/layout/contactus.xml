@@ -17,7 +17,7 @@
         <com.LAW.Lift.model.MyTextviews
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Contact Us"
+            android:text="@string/textView10"
             android:id="@+id/textView10"
             android:textSize="25sp"
             android:textColor="#fff"
@@ -40,7 +40,7 @@
     <com.LAW.Lift.model.MyTextviews
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="M/s LIFT INDIA"
+        android:text="@string/textView2"
         android:textColor="#1c1c1c"
         android:textSize="17sp"
         android:textAlignment="gravity"
@@ -53,7 +53,7 @@
     <com.LAW.Lift.model.MyTextviews
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="C/O M/s.sai,Bharat,ilan"
+        android:text="@string/textView3"
         android:layout_marginTop="3dp"
         android:layout_marginLeft="5dp"
         android:textColor="#1c1c1c"
@@ -65,7 +65,7 @@
     <com.LAW.Lift.model.MyTextviews
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Advocates"
+        android:text="@string/textView4"
         android:textColor="#1c1c1c"
         android:textSize="17sp"
         android:textAlignment="gravity"
@@ -80,7 +80,7 @@
     <com.LAW.Lift.model.MyTextviews
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="II FLOOR"
+        android:text="@string/textView5"
         android:layout_marginTop="3dp"
         android:textColor="#1c1c1c"
         android:textSize="17sp"
@@ -94,7 +94,7 @@
     <com.LAW.Lift.model.MyTextviews
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Vanguard House"
+        android:text="@string/textView6"
         android:layout_marginTop="3dp"
         android:textColor="#1c1c1c"
         android:textSize="17sp"
@@ -113,7 +113,7 @@
         android:textAlignment="gravity"
         android:lineSpacingExtra="4dp"
         android:layout_marginLeft="5dp"
-        android:text="148/48,Moore Street/2nd Lane Beach,"
+        android:text="@string/textView7"
         android:layout_marginTop="3dp"
         android:id="@+id/textView7"
 
@@ -122,7 +122,7 @@
     <com.LAW.Lift.model.MyTextviews
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chennai-600001"
+        android:text="@string/textView8"
         android:textColor="#1c1c1c"
         android:textSize="17sp"
         android:textAlignment="gravity"
@@ -141,7 +141,7 @@
             android:lineSpacingExtra="4dp"
             android:layout_marginTop="3dp"
             android:layout_marginLeft="5dp"
-            android:text="Email: lawinfingertips@gmail.com"
+            android:text="@string/textView9"
             android:id="@+id/textView9"
             android:layout_below="@+id/textView8"/>
         <ImageView

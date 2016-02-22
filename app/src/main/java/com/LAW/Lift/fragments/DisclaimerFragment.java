@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.LAW.Lift.R;
+import com.LAW.Lift.app.LiftApplication;
 
 public class DisclaimerFragment extends Fragment {
 
@@ -47,5 +48,9 @@ public class DisclaimerFragment extends Fragment {
         return rootView;
     }
 
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        LiftApplication.getInstance().trackScreenView("Disclaimer");
+    }
 }

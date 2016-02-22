@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.LAW.Lift.R;
+import com.LAW.Lift.app.LiftApplication;
+
 public class ContactusFragment extends Fragment {
     public static ContactusFragment newInstance() {
         return null;
@@ -23,7 +25,11 @@ public class ContactusFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.contactus, container, false);
         return rootView;
     }
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        LiftApplication.getInstance().trackScreenView("Contact us");
+    }
 
 
     }

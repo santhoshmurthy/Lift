@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.LAW.Lift.R;
 import com.LAW.Lift.adapter.highcourtadapter;
 import com.LAW.Lift.adapter.supremeadapter;
+import com.LAW.Lift.app.LiftApplication;
 import com.LAW.Lift.app.MyVolley;
 import com.LAW.Lift.common.AlertDialogManager;
 import com.LAW.Lift.common.ConnectionDetector;
@@ -62,7 +63,7 @@ public class MadrasHighcourt extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.madraslist);
-
+        LiftApplication.getInstance().trackScreenView("Madras HighCourt");
         this.getActionBar().setDisplayShowCustomEnabled(true);
         this.getActionBar().setDisplayShowTitleEnabled(false);
         LayoutInflater inflator = LayoutInflater.from(this);
@@ -95,6 +96,11 @@ public class MadrasHighcourt extends Activity {
             //Toast.makeText(Booking.this,sname+"\n"+slat+"\n"+slong, Toast.LENGTH_SHORT).show();
         }
         madrastext.setText(months);
+
+        if(MainActivity.Language.equals("Tamil")){
+            urlJsonArry = "http://www.lawinfingertips.com/webservice/Lift_Final_Tamil/get_case_law.php?book_id=";
+            high ="&type=hc&court_id=115";
+        }
         cd = new ConnectionDetector(getApplicationContext());
         listView = (ListView)findViewById(R.id.listView4);
 
@@ -176,6 +182,7 @@ public class MadrasHighcourt extends Activity {
 
                             } catch (JSONException e) {
                                 e.printStackTrace();
+                                LiftApplication.getInstance().trackException(e);
 
                                 if (pDialog.isShowing())
                                     pDialog.dismiss();

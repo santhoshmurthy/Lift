@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.LAW.Lift.R;
+import com.LAW.Lift.app.LiftApplication;
 
 
 public class HowtouseFragment extends Fragment {
@@ -39,7 +40,11 @@ public class HowtouseFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.howtouse, container, false);
         return rootView;
     }
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        LiftApplication.getInstance().trackScreenView("How to use");
+    }
 
 }
 

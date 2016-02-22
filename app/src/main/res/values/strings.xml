@@ -7,10 +7,36 @@
     <string name="AboutUs">About Us</string>
     <string name="HowTouse">how to use</string>
     <string name="Disclaimer">Disclaimer</string>
-    <string name="textView18">* <b>LIBRARY</b> icon, contains all the old volumes from July, 2013.  Touch the icon, then choose the year and then touch the volume to read.</string>
-    <string name="textView16">* Information about the App,<b>Libarary</b> or <b>Search</b>options are available by touching the drop-down menu icon.</string>
-    <string name="textView15">* Touching the icon <b> English </b> or <b>தமிழ் </b>will change the language of the entire content accordingly.</string>
+
+    <string name="textView20">How To Use</string>
+    <string name="textView17">. LIFT icon in the drop down provides information About the App, How to Use, Aim and Disclaimer and Contact.</string>
+    <string name="textView14">.  All the five sections of the Monthly LIFT content are in the main display.  Users can touch and access the same. Content will be displayed if only your device is connected to the internet.</string>
+    <string name="textView18">. <b>LIBRARY</b> icon, contains all the old volumes from July, 2013.  Touch the icon, then choose the year and then touch the volume to read.</string>
+    <string name="textView16">. Information about the App,<b>Library</b> or <b>Search</b>options are available by touching the drop-down menu icon.</string>
+<string name="textView19">.SEARCH icon enables searching the legislation and case law sections by any key word. Touch the icon, then select the section and then key in the word for search and you will find the relevant pages displayed.</string>
+    <string name="textView15">. Touching the icon <b> English </b> or <b>தமிழ் </b>will change the language of the entire content accordingly.</string>
+    <string name="textView2">M/s LIFT INDIA</string>
+    <string name="textView3">C/O M/s.sai,Bharat,ilan</string>
+    <string name="textView4">Advocates</string>
+    <string name="textView5">II FLOOR</string>
+    <string name="textView6">Vanguard House</string>
+    <string name="textView7">148/48,Moore Street/2nd Lane Beach,</string>
+    <string name="textView8">Chennai-600001</string>
+    <string name="textView9">Email: lawinfingertips@gmail.com</string>
+    <string name="textView10">Contact Us</string>
+    <string name="textView12">LIFT grants permission to its users to copy, reproduce, and print or use the content of all the five sections of the ‘LIFT of the Month’ for their professional / personal use, except commercial exploitation. LIFT INDIA only reserves its rights of the name, logo and its one-of-a-kind format.</string>
+    <string name="textView11">LIFT (Law in Finger Tips) is easy access to Indian Law. With a strong and crystal clear mission to provide greatly useful legal information in a well cut-out and simple, yet proficient and professional manner to the needs of experts as well as those of the general public, every month LIFT presents carefully and viably selected Legislations of the Union of India and the State of Tamil Nadu, decided cases of the Supreme Court of India and the Madras High Court in an exceptional style. Furthermore it contains a ‘Forum’ section containing related information and tips in an interesting fashion. Every section of the content made available, is written by highly experienced professionals who are very much in active practice and hence understand the needs of all users, thereby making this app extremely useful and highly trustable. The fact that content is available in both English and Tamil, for free, doubles the already high utility and value of this app.</string>
+    <string name="textView13">About Us</string>
+    <string name="textView25">Proclaimer and Disclaimer</string>
+    <string name="textView21">LIFT Proclaims :</string>
+    <string name="textView22">A society requires a good legal system to exist and function smoothly; and the people of that society require and deserve legal awareness and the resultant access; which can be created only by provision of updated dissemination of relevant information. We, here at LIFT believe that Smart Phones, Tablets and the Internet are the perfect media for this propagation. LIFT, a free Legal App, joins hands with you and the law in the March ahead. LIFT is Legal Information Fast Track.</string>
+    <string name="textView23">LIFT Disclaims :</string>
+    <string name="textView24">The content of LIFT is as per the perspective and understanding of the authors, in the words and phrases of their choice; Miniscule human errors are possible; Users are to apply and use LIFT material entirely on their own prudence and judgment; LIFT provides only select legal material and is not exhaustive.</string>
+
+
 <string name="spinner1">select</string>
+
+
 
 
     <string-array name="nav_drawer_items">
@@ -89,7 +115,7 @@
     <string name="forum_all">Dear All,</string>
     <string name="forum_team3">LIFT TEAM</string>
 
-    <string name="lang">English</string>
+    <string name="lang">Tamil</string>
 
 
 

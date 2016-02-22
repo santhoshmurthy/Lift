@@ -19,6 +19,7 @@ import android.widget.TextView;
 import com.LAW.Lift.R;
 import com.LAW.Lift.adapter.CardArrayAdapter;
 import com.LAW.Lift.adapter.LibraryAdapter;
+import com.LAW.Lift.app.LiftApplication;
 import com.LAW.Lift.app.MyVolley;
 import com.LAW.Lift.common.AlertDialogManager;
 import com.LAW.Lift.common.ConnectionDetector;
@@ -63,7 +64,7 @@ public class Library extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.librarylist);
-
+        LiftApplication.getInstance().trackScreenView("Library");
         this.getActionBar().setDisplayShowCustomEnabled(true);
         this.getActionBar().setDisplayShowTitleEnabled(false);
         LayoutInflater inflator = LayoutInflater.from(this);
@@ -82,6 +83,10 @@ public class Library extends Activity {
             }
         });
 
+        if(MainActivity.Language.equals("Tamil")){
+            urlJsonArry = "http://www.lawinfingertips.com/webservice/Lift_Final_Tamil/get_all_books.php?year=";
+            jsonPorturl = "http://www.lawinfingertips.com/webservice/Lift_Final_Tamil/get_year.php?id=1";
+        }
 
         cd = new ConnectionDetector(getApplicationContext());
         gridView = (GridView) findViewById(R.id.gridView);
@@ -122,6 +127,7 @@ public class Library extends Activity {
                             new PortNumber().execute();
                         } catch (JSONException e) {
                             e.printStackTrace();
+                            LiftApplication.getInstance().trackException(e);
 
 
                         }
@@ -196,6 +202,7 @@ public class Library extends Activity {
 
                                 } catch (JSONException e) {
                                     e.printStackTrace();
+                                    LiftApplication.getInstance().trackException(e);
 
                                     if (pDialog.isShowing())
                                         pDialog.dismiss();

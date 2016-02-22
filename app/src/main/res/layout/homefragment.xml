@@ -10,7 +10,7 @@
     android:background="#fff">
 
 
-    <com.LAW.Lift.model.MyTextview
+    <com.LAW.Lift.model.MyTextviews
         android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,12 +25,12 @@
     <com.LAW.Lift.model.ButtonText
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:text="Central Legislation"
+        android:text="@string/string_central"
         android:textColor="#fff"
         android:textSize="20sp"
         android:textAllCaps="false"
         android:id="@+id/central"
-        android:background="#f99c35"
+        android:background="#e59400"
         android:layout_below="@+id/mon"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
@@ -38,24 +38,24 @@
     <com.LAW.Lift.model.ButtonText
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:text="Tamilnadu Legislation"
+        android:text="@string/string_tamil"
         android:textColor="#fff"
         android:textSize="20sp"
         android:textAllCaps="false"
         android:layout_marginTop="15dp"
         android:id="@+id/Tamil"
-        android:background="#f99c35"
+        android:background="#e59400"
         android:layout_below="@+id/central"
         android:layout_centerHorizontal="true" />
 
     <com.LAW.Lift.model.ButtonText
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:text="Supreme court"
+        android:text="@string/string_supreme"
         android:textColor="#fff"
         android:textSize="20sp"
         android:textAllCaps="false"
-        android:background="#497e13"
+        android:background="#55a555"
         android:layout_marginTop="15dp"
         android:id="@+id/supreme"
         android:layout_below="@+id/Tamil"
@@ -64,10 +64,10 @@
     <com.LAW.Lift.model.ButtonText
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:text="Madras High court"
+        android:text="@string/string_madras"
         android:textColor="#fff"
         android:textSize="20sp"
-        android:background="#497e13"
+        android:background="#55a555"
         android:layout_marginTop="15dp"
         android:id="@+id/Madras"
         android:layout_below="@+id/supreme"
@@ -76,11 +76,11 @@
     <com.LAW.Lift.model.ButtonText
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:text="Forum"
+        android:text="@string/string_forum"
         android:textColor="#fff"
         android:textSize="20sp"
         android:id="@+id/forum"
-        android:background="#0f76b8"
+        android:background="#5f7fd4"
         android:layout_marginTop="15dp"
         android:layout_below="@+id/Madras"
         android:layout_centerHorizontal="true" />

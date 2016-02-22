@@ -28,6 +28,7 @@ import android.widget.Toast;
 
 import com.LAW.Lift.R;
 import com.LAW.Lift.adapter.CardArrayAdapter;
+import com.LAW.Lift.app.LiftApplication;
 import com.LAW.Lift.app.MyVolley;
 import com.LAW.Lift.common.AlertDialogManager;
 import com.LAW.Lift.common.ConnectionDetector;
@@ -88,23 +89,22 @@ public class CentralLegislation extends Activity {
     String bookid;
     Button button2;
     MyTextviews febcentral;
-
     String months;
     private CardArrayAdapter rideadapter;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.central);
 
 
+        LiftApplication.getInstance().trackScreenView("Central Legislation");
         this.getActionBar().setDisplayShowCustomEnabled(true);
         this.getActionBar().setDisplayShowTitleEnabled(false);
         LayoutInflater inflator = LayoutInflater.from(this);
         View v = inflator.inflate(R.layout.titleview, null);
         ((MyTextviewWhite) v.findViewById(R.id.title)).setText(this.getTitle());
         this.getActionBar().setCustomView(v);
+
 
 
         back = (ImageView) findViewById(R.id.back);
@@ -118,6 +118,7 @@ public class CentralLegislation extends Activity {
 
             }
         });
+
         febcentral = (MyTextviews) findViewById(R.id.febcentral);
 
         Bundle extras = getIntent().getExtras();
@@ -131,7 +132,11 @@ public class CentralLegislation extends Activity {
             //Toast.makeText(Booking.this,sname+"\n"+slat+"\n"+slong, Toast.LENGTH_SHORT).show();
         }
 
+        if(MainActivity.Language.equals("Tamil")){
+            urlJsonArry = "http://www.lawinfingertips.com/webservice/Lift_Final_Tamil/get_legislation.php?book_id=";
+            half ="&type=central";
 
+        }
         febcentral.setText(months);
         cd = new ConnectionDetector(getApplicationContext());
         listView = (ListView) findViewById(R.id.listView);
@@ -145,13 +150,10 @@ public class CentralLegislation extends Activity {
                     "Internet Connection Lost",
                     "Please connect to Internet and Try again..", false);
         } else {
-
             pDialog = new ProgressDialog(CentralLegislation.this);
             pDialog.setMessage("Loading....");
             pDialog.setCancelable(false);
             pDialog.show();
-
-
             RequestQueue queue = MyVolley.getRequestQueue();
 
             JsonObjectRequest req = new JsonObjectRequest(urlJsonArry + bookid + half, null,
@@ -230,6 +232,8 @@ public class CentralLegislation extends Activity {
 
                             } catch (JSONException e) {
                                 e.printStackTrace();
+
+                                LiftApplication.getInstance().trackException(e);
 
                                 if (pDialog.isShowing())
                                     pDialog.dismiss();

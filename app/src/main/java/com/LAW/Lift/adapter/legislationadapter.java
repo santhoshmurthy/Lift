@@ -90,7 +90,7 @@ public class legislationadapter extends ArrayAdapter<legislationcard> {
             viewHolder.line6 = (TextView) row.findViewById(R.id.tamilcame);
             viewHolder.line7 = (TextView) row.findViewById(R.id.tamilsalient);
             viewHolder.line8 = (TextView) row.findViewById(R.id.tamilbrief);
-            viewHolder.line9 = (TextView) row.findViewById(R.id.tamilfulltext);
+           viewHolder.line9 = (TextView) row.findViewById(R.id.tamilfulltext);
             mProgressDialog = new ProgressDialog(mcontext);
             mProgressDialog.setMessage("Downloading file..");
             mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
@@ -111,7 +111,7 @@ public class legislationadapter extends ArrayAdapter<legislationcard> {
         viewHolder.line6.setText(legislationcard.gettamilcame());
         viewHolder.line7.setText(legislationcard.gettamilsalient());
         viewHolder.line8.setText(legislationcard.gettamilbrief());
-        viewHolder.line9.setText(legislationcard.gettamilfulltext());
+        //viewHolder.line9.setText(legislationcard.gettamilfulltext());
         viewHolder.line1.setSelected(true);
         viewHolder.line2.setSelected(true);
         viewHolder.line3.setSelected(true);
@@ -174,11 +174,11 @@ public class legislationadapter extends ArrayAdapter<legislationcard> {
         }
 
 
-        if(legislationcard.gettamilfulltext().equals("")){
+       /* if(legislationcard.gettamilfulltext().equals("")){
             viewHolder.line9.setText("Content not uploaded");
         }else {
             viewHolder.line9.setText(legislationcard.gettamilfulltext());
-        }
+        }*/
 
 
 

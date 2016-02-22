@@ -29,8 +29,8 @@
     <com.LAW.Lift.model.ButtonText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tamil"
-        android:id="@+id/button3"
+        android:text="@string/lang"
+        android:id="@+id/button2"
         android:background="#e59400"
         android:textAllCaps="false"
         android:layout_centerVertical="true"

@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.LAW.Lift.R;
 import com.LAW.Lift.adapter.CardArrayAdapter;
 import com.LAW.Lift.adapter.legislationadapter;
+import com.LAW.Lift.app.LiftApplication;
 import com.LAW.Lift.app.MyVolley;
 import com.LAW.Lift.common.AlertDialogManager;
 import com.LAW.Lift.common.ConnectionDetector;
@@ -75,7 +76,7 @@ public class TamilLegislation extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tamil);
-
+        LiftApplication.getInstance().trackScreenView("tamil legislation");
         this.getActionBar().setDisplayShowCustomEnabled(true);
         this.getActionBar().setDisplayShowTitleEnabled(false);
         LayoutInflater inflator = LayoutInflater.from(this);
@@ -106,6 +107,10 @@ public class TamilLegislation extends Activity {
             //Toast.makeText(Booking.this,sname+"\n"+slat+"\n"+slong, Toast.LENGTH_SHORT).show();
         }
         tamilfeb.setText(months);
+        if(MainActivity.Language.equals("Tamil")){
+            urlJsonArry = "http://www.lawinfingertips.com/webservice/Lift_Final_Tamil/get_legislation.php?book_id=";
+            tamil="&type=state&state_id=1000";
+        }
         cd = new ConnectionDetector(getApplicationContext());
         listView2 = (ListView)findViewById(R.id.listView2);
 
@@ -201,6 +206,7 @@ public class TamilLegislation extends Activity {
 
                             } catch (JSONException e) {
                                 e.printStackTrace();
+                                LiftApplication.getInstance().trackException(e);
 
                                 if (pDialog.isShowing())
                                     pDialog.dismiss();

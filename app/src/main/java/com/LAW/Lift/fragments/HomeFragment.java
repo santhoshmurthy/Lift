@@ -15,8 +15,10 @@ import com.LAW.Lift.R;
 import com.LAW.Lift.activity.CentralLegislation;
 import com.LAW.Lift.activity.Forum;
 import com.LAW.Lift.activity.MadrasHighcourt;
+import com.LAW.Lift.activity.MainActivity;
 import com.LAW.Lift.activity.Supremecourt;
 import com.LAW.Lift.activity.TamilLegislation;
+import com.LAW.Lift.app.LiftApplication;
 import com.LAW.Lift.app.MyVolley;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -30,7 +32,7 @@ import org.json.JSONObject;
 public class HomeFragment extends Fragment {
 
   String urlJsonArry = "http://www.lawinfingertips.com/webservice/Lift_Final/lift_of_the_month.php?id=1";
-    String months,bookid,yearss;
+    String months,bookid,yearss,Language;
     private Button central,Tamil,supreme,Madras,forum;
     private TextView mon;
     public static String[] get_legislation;
@@ -66,6 +68,10 @@ public class HomeFragment extends Fragment {
             Log.d("HomeFrargment", bookid + months);
 
         }else{
+            if(MainActivity.Language.equals("Tamil")){
+                urlJsonArry = "http://www.lawinfingertips.com/webservice/Lift_Final_Tamil/lift_of_the_month.php?id=1";
+
+            }
             RequestQueue queue = MyVolley.getRequestQueue();
 
             JsonObjectRequest req = new JsonObjectRequest(urlJsonArry, null,
@@ -107,6 +113,7 @@ public class HomeFragment extends Fragment {
 
                             } catch (JSONException e) {
                                 e.printStackTrace();
+                                LiftApplication.getInstance().trackException(e);
 
 
                             }
@@ -130,9 +137,11 @@ public class HomeFragment extends Fragment {
         central.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                LiftApplication.getInstance().trackEvent("Central legislation","click","central");
                 Intent openIntent = new Intent(getActivity(), CentralLegislation.class);
                 openIntent.putExtra("book_id", bookid);
                 openIntent.putExtra("month",months);
+
                 startActivity(openIntent);
                 // MainActivity.this.finish();
 
@@ -143,9 +152,11 @@ public class HomeFragment extends Fragment {
         Tamil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                LiftApplication.getInstance().trackEvent("Tamil Nadu legislation","click","tamilnadu");
                 Intent openIntent = new Intent(getActivity(), TamilLegislation.class);
                 openIntent.putExtra("book_id", bookid);
                 openIntent.putExtra("month",months);
+
                 startActivity(openIntent);
                 // MainActivity.this.finish();
 
@@ -156,9 +167,11 @@ public class HomeFragment extends Fragment {
         supreme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                LiftApplication.getInstance().trackEvent("Supreme court","click","Supreme court");
                 Intent openIntent = new Intent(getActivity(), Supremecourt.class);
                 openIntent.putExtra("book_id", bookid);
                 openIntent.putExtra("month",months);
+
                 startActivity(openIntent);
                 //  MainActivity.this.finish();
 
@@ -168,6 +181,7 @@ public class HomeFragment extends Fragment {
         Madras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                LiftApplication.getInstance().trackEvent("MadrasHighcourt","click","madras highcourt");
                 Intent openIntent = new Intent(getActivity(), MadrasHighcourt.class);
                 openIntent.putExtra("book_id", bookid);
                 openIntent.putExtra("month",months);
@@ -180,9 +194,11 @@ public class HomeFragment extends Fragment {
         forum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                LiftApplication.getInstance().trackEvent("Forum","click","forum");
                 Intent openIntent = new Intent(getActivity(), Forum.class);
                 openIntent.putExtra("book_id", bookid);
                 openIntent.putExtra("month",months);
+
                 startActivity(openIntent);
                 // MainActivity.this.finish();
 
@@ -195,5 +211,10 @@ public class HomeFragment extends Fragment {
         return rootView;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        LiftApplication.getInstance().trackScreenView("Homefragment");
+    }
 
 }

@@ -7,48 +7,27 @@
     <bool name="ga_autoActivityTracking">true</bool>
 
     <!--  The property id associated with this analytics tracker -->
-    <string name="ga_trackingId">UA-72566721-1</string>
+    <string name="ga_trackingId">UA-56889582-1</string>
 
     <string name="ga_sampleFrequency">100.0</string>
 
     <bool name="ga_reportUncaughtExceptions">true</bool>
 
 
-    <screenName name="com.webapps.webapps.activity.MainActivity">Main Activity</screenName>
+    <screenName name="com.LAW.Lift.activity.CentralLegislation">Central Legislation</screenName>
 
-    <screenName name="com.webapps.webapps.activity.LoginScreen">Login</screenName>
+    <screenName name="com.LAW.Lift.activity.Library">Library</screenName>
 
-    <screenName name="com.webapps.webapps.activity.AddDomain">Adding Domains</screenName>
+    <screenName name="com.LAW.Lift.activity.Forum">Forum</screenName>
 
-    <screenName name="com.webapps.webapps.activity.AddSecDetails">Adding Secondary Details</screenName>
+    <screenName name="com.LAW.Lift.activity.MadrasHighcourt">Madras HighCourt</screenName>
 
-    <screenName name="com.webapps.webapps.activity.AddServer">Adding Server</screenName>
+    <screenName name="com.LAW.Lift.activity.Supreme Court">Supreme Court</screenName>
 
-    <screenName name="com.webapps.webapps.activity.DomainDetails">Domain Details</screenName>
+    <screenName name="com.LAW.Lift.activity.TamilLegislation">tamil legislation</screenName>
 
-    <screenName name="com.webapps.webapps.activity.DomainList">Domain list</screenName>
+    <screenName name="com.LAW.Lift.activity.SplashScreen">Splash</screenName>
 
-    <screenName name="com.webapps.webapps.activity.ForgotPassword">ForgetPassword</screenName>
-
-    <screenName name="com.webapps.webapps.activity.ForgotPasswordOtp">ForgotPasswordOtp</screenName>
-
-    <screenName name="com.webapps.webapps.activity.OTPActivity">OTPActivity </screenName>
-
-    <screenName name="com.webapps.webapps.activity.ResetPassword">ResetPassword</screenName>
-
-    <screenName name="com.webapps.webapps.activity.SignUp">Signup</screenName>
-
-    <screenName name="com.webapps.webapps.activity.SplashScreen">SplashScreen</screenName>
-
-    <screenName name="com.webapps.webapps.activity.ServerDetails">Server Details</screenName>
-
-    <screenName name="com.webapps.webapps.activity.ServerList">Server List</screenName>
-
-    <screenName name="com.webapps.webapps.activity.ServerStatisticLinks">Server Statictic link</screenName>
-
-    <screenName name="com.webapps.webapps.activity.StatisticLinks">Statistic Links</screenName>
-
-    <screenName name="com.webapps.webapps.activity.DomainSecList">Domain Secondary List</screenName>
 
 
 

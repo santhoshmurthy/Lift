@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.LAW.Lift.R;
 import com.LAW.Lift.adapter.forumadapter;
 import com.LAW.Lift.adapter.supremeadapter;
+import com.LAW.Lift.app.LiftApplication;
 import com.LAW.Lift.app.MyVolley;
 import com.LAW.Lift.common.AlertDialogManager;
 import com.LAW.Lift.common.ConnectionDetector;
@@ -60,6 +61,7 @@ String  bookid;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.forumlist);
+        LiftApplication.getInstance().trackScreenView("Forum");
 
         this.getActionBar().setDisplayShowCustomEnabled(true);
         this.getActionBar().setDisplayShowTitleEnabled(false);
@@ -93,7 +95,10 @@ String  bookid;
 
         ride3 = new forumadapter(Forum.this, R.layout.forum);
         listView.setAdapter(ride3);
+        if(MainActivity.Language.equals("Tamil")){
+            urlJsonArry = "http://www.lawinfingertips.com/webservice/Lift_Final_Tamil/get_thoughts.php?book_id=";
 
+        }
 
         if (!cd.isConnectingToInternet()) {
             alert.showAlertDialog(getApplicationContext(),
@@ -164,6 +169,7 @@ String  bookid;
 
                             } catch (JSONException e) {
                                 e.printStackTrace();
+                                LiftApplication.getInstance().trackException(e);
 
                                 if (pDialog.isShowing())
                                     pDialog.dismiss();
